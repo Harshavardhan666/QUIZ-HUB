@@ -1,0 +1,408 @@
+<html>
+
+<head>
+
+    <title>UID Test </title>
+    <style>
+        hr {
+            width: 300px;
+            float: left;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .questions {
+            margin-left: 300px;
+            margin-right: 300px;
+            font-size: 20px;
+        }
+
+        .heading {
+            align-items: center;
+            background-color: #00A7F4;
+            margin-left: 630px;
+            margin-right: 700px;
+            text-align: center;
+            color: white;
+            width: 200px;
+            text-transform: uppercase;
+            font-weight: 900;
+        }
+
+        .points {
+            margin-left: 600px;
+            padding: 5px;
+            padding-left: 1px;
+            padding-right: 1px;
+            background-color: cyan;
+        }
+
+        .timer {
+            margin: 20px;
+            font-size: 20px;
+            position: fixed;
+            font-weight: bold;
+        }
+
+        #text-timer {
+            color: green;
+        }
+        
+    </style>
+    <link rel="icon" href="https://i.ibb.co/sb8N2bt/Quiz-Zone-Logo-Tile-192.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="button.css">
+    <link rel="stylesheet" href="arrbtn.css">
+    <script src="https://kit.fontawesome.com/15f8b2b9b3.js" crossorigin="anonymous"></script>
+    <script>
+        function myfunction1() {
+            var y = confirm('Press OK To End The Test');
+            if (y == true) {
+                window.location.replace("studenttests.html");
+            } else {
+                return false;
+            }
+        }
+
+        function myfunction2() {
+            var z = confirm('Press OK To Submit The Test');
+            if (z == false) {
+                return false;
+            } else if (z == true) {
+                window.location.replace("TestEnd.html");
+            }
+        }
+
+    </script>
+</head>
+
+<body bgcolor="white"><br>
+    <div class="timer">
+        <text id="text-timer"> Time Left: </text><span id="countdown"></span>
+    </div>
+    <script type="text/javascript" src="timer.js"></script>
+    <div class="heading">
+        <center>
+            <h1>UID Quiz</h1>
+        </center>
+    </div>
+    <br><br>
+    <div class="questions">
+        <p>
+
+        <p>
+
+            <b> <big> Q1) </big><span class="points">2 Points</span>
+                <br>
+                <br>What does CSS stand for <br></b>
+
+        <blockquote>
+
+            <label for="o1(1)"><input type="radio" name="q1" id="o1(1)" value="Current Style Sheets"> <img
+                    src="https://i.ibb.co/zfsbr8N/a.png" alt="a" border="0" style="width: 15px; height: 15px;"> Current
+                Style Sheets </label><br>
+
+            <label for="o2(1)"><input type="radio" name="q1" id="o2(1)" value="Current Sheets Style"> <img
+                    src="https://i.ibb.co/cFRFVBc/b.png" alt="b" border="0" style="width: 15px; height: 15px;"> Current
+                Sheets Style </label><br>
+
+            <label for="o3(1)"><input type="radio" name="q1" id="o3(1)" value="Cascading Style Sheets"> <img
+                    src="https://i.ibb.co/D72JHYw/c.png" alt="c" border="0" style="width: 15px; height: 15px;">
+                Cascading Style Sheets </label><br>
+            <label for="o4(1)"><input type="radio" name="q1" id="o4(1)" value="Cascading Sheets Style"> <img
+                    src="https://i.ibb.co/mSNbqMX/d.png" alt="d" border="0" style="width: 15px; height: 15px;">
+                Cascading Sheets Style </label><br>
+
+        </blockquote>
+
+        <p>
+
+            <hr><br>
+            <b>
+                <big> Q2) </big> <span class="points">2 Points</span>
+                <br>
+                <br>Which of the following is true about Javascript <br></b>
+
+        <blockquote>
+
+            <label for="o1(2)"><input type="radio" name="q2" id="o1(2)" value="It is a server side scripting language">
+                <img src="https://i.ibb.co/zfsbr8N/a.png" alt="a" border="0" style="width: 15px; height: 15px;"> It is a
+                server side scripting language </label><br>
+
+            <label for="o2(2)"><input type="radio" name="q2" id="o2(2)" value="It is client side scripting language">
+                <img src="https://i.ibb.co/cFRFVBc/b.png" alt="b" border="0" style="width: 15px; height: 15px;"> It is
+                client side scripting language </label><br>
+
+            <label for="o3(2)"><input type="radio" name="q2" id="o3(2)" value="It is a Software"> <img
+                    src="https://i.ibb.co/D72JHYw/c.png" alt="c" border="0" style="width: 15px; height: 15px;"> It is a
+                Software </label><br>
+            <label for="o4(2)"><input type="radio" name="q2" id="o4(2)" value="It is a database"> <img
+                    src="https://i.ibb.co/mSNbqMX/d.png" alt="d" border="0" style="width: 15px; height: 15px;"> It is a
+                database </label><br>
+        </blockquote>
+
+        <p><b>
+
+                <hr><br>
+
+                <big> Q3) </big> <span class="points">2 Points</span>
+                <br>
+                <br>Which of the following statements is false about hosting <br>
+            </b>
+
+        <blockquote>
+
+            <label for="o1(3)"><input type="radio" name="q3" id="o1(3)"
+                    value="Shared hosting is cheaper than dedicated hosting"> <img src="https://i.ibb.co/zfsbr8N/a.png"
+                    alt="a" border="0" style="width: 15px; height: 15px;"> Shared hosting is cheaper than dedicated
+                hosting </label><br>
+
+            <label for="o2(3)"><input type="radio" name="q3" id="o2(3)"
+                    value="Shared hosting is safer than dedicated hosting"> <img src="https://i.ibb.co/cFRFVBc/b.png"
+                    alt="b" border="0" style="width: 15px; height: 15px;"> Shared hosting is safer than dedicated
+                hosting </label><br>
+
+            <label for="o3(3)"><input type="radio" name="q3" id="o3(3)"
+                    value="Dedicated hosting is safer than shared hosting"> <img src="https://i.ibb.co/D72JHYw/c.png"
+                    alt="c" border="0" style="width: 15px; height: 15px;"> Dedicated hosting is safer than shared
+                hosting </label><br>
+            <label for="o4(3)"><input type="radio" name="q3" id="o4(3)"
+                    value="Though more expensive than shared hosting, Dedicated hosting is more secure"> <img
+                    src="https://i.ibb.co/mSNbqMX/d.png" alt="d" border="0" style="width: 15px; height: 15px;"> Though
+                more expensive than shared hosting, Dedicated hosting is more secure </label><br>
+        </blockquote>
+
+        <p><b>
+
+                <hr><br>
+
+                <big> Q4) </big> <span class="points">2 Points</span>
+                <br>
+                <br>SQL stands for <br>
+            </b>
+
+        <blockquote>
+
+            <label for="o1(4)"><input type="radio" name="q4" id="o1(4)" value="Structured Query Language"> <img
+                    src="https://i.ibb.co/zfsbr8N/a.png" alt="a" border="0" style="width: 15px; height: 15px;">
+                Structured Query Language </label><br>
+
+            <label for="o2(4)"><input type="radio" name="q4" id="o2(4)" value="Statistical Query Language"> <img
+                    src="https://i.ibb.co/cFRFVBc/b.png" alt="b" border="0" style="width: 15px; height: 15px;">
+                Statistical Query Language </label><br>
+
+            <label for="o3(4)"><input type="radio" name="q4" id="o3(4)" value="Superior Questions Lot"> <img
+                    src="https://i.ibb.co/D72JHYw/c.png" alt="c" border="0" style="width: 15px; height: 15px;"> Superior
+                Questions Lot </label><br>
+            <label for="o4(4)"><input type="radio" name="q4" id="o4(4)" value="Standard Query Lot"> <img
+                    src="https://i.ibb.co/mSNbqMX/d.png" alt="d" border="0" style="width: 15px; height: 15px;"> Standard
+                Query Lot </label><br>
+        </blockquote>
+
+        <p><b>
+
+                <hr><br>
+
+                <big> Q5) </big> <span class="points">2 Points</span>
+                <br>
+                <br>The correct sequence of HTML tags for starting a webpage is <br>
+            </b>
+
+        <blockquote>
+
+            <label for="o1(5)"><input type="radio" name="q5" id="o1(5)" value="Head, Title, HTML, body"> <img
+                    src="https://i.ibb.co/zfsbr8N/a.png" alt="a" border="0" style="width: 15px; height: 15px;"> Head,
+                Title, HTML, Body </label><br>
+
+            <label for="o2(5)"><input type="radio" name="q5" id="o2(5)" value="HTML, Body, Title, Head"> <img
+                    src="https://i.ibb.co/cFRFVBc/b.png" alt="b" border="0" style="width: 15px; height: 15px;"> HTML,
+                Body, Title, Head </label><br>
+
+            <label for="o3(5)"><input type="radio" name="q5" id="o3(5)" value="HTML, Head, Title, Body"> <img
+                    src="https://i.ibb.co/D72JHYw/c.png" alt="c" border="0" style="width: 15px; height: 15px;"> HTML,
+                Head, Body, Title </label><br>
+            <label for="o4(5)"><input type="radio" name="q5" id="o4(5)" value="HTML, Head, Title, Body"> <img
+                    src="https://i.ibb.co/mSNbqMX/d.png" alt="d" border="0" style="width: 15px; height: 15px;"> HTML,
+                Head, Title, Body </label><br>
+        </blockquote>
+
+        <p><b>
+
+                <hr><br>
+
+                <big> Q6) </big> <span class="points">2 Points</span>
+                <br>
+                <br>Which character is used to represent the closing of a tag in HTML? <br>
+            </b>
+
+        <blockquote>
+
+            <label for="o1(6)"><input type="radio" name="q6" id="o1(6)" value="\"> <img
+                    src="https://i.ibb.co/zfsbr8N/a.png" alt="a" border="0" style="width: 15px; height: 15px;"> \
+            </label><br>
+
+            <label for="o2(6)"><input type="radio" name="q6" id="o2(6)" value="!"> <img
+                    src="https://i.ibb.co/cFRFVBc/b.png" alt="b" border="0" style="width: 15px; height: 15px;"> !
+            </label><br>
+
+            <label for="o3(6)"><input type="radio" name="q6" id="o3(6)" value="/"> <img
+                    src="https://i.ibb.co/D72JHYw/c.png" alt="c" border="0" style="width: 15px; height: 15px;"> /
+            </label><br>
+            <label for="o4(6)"><input type="radio" name="q6" id="o4(6)" value="."> <img
+                    src="https://i.ibb.co/mSNbqMX/d.png" alt="d" border="0" style="width: 15px; height: 15px;"> .
+            </label><br>
+        </blockquote>
+
+        <p><b>
+
+                <hr><br>
+
+                <big> Q7) </big> <span class="points">2 Points</span>
+                <br>
+                <br>How to insert an image in HTML?
+                <br>
+            </b>
+
+        <blockquote>
+
+            <label for="o1(7)"><input type="radio" name="q7" id="o1(7)" value=""> <img
+                    src="https://i.ibb.co/zfsbr8N/a.png" alt="a" border="0" style="width: 15px; height: 15px;"> &lt; img
+                href = "jtp.png" &gt; </label><br>
+
+            <label for="o2(7)"><input type="radio" name="q7" id="o2(7)" value="<img url = " jtp.png" /> <img
+                    src="https://i.ibb.co/cFRFVBc/b.png" alt="b" border="0" style="width: 15px; height: 15px;"> &lt; img
+                url = "jtp.png" &gt; </label><br>
+
+            <label for="o3(7)"><input type="radio" name="q7" id="o3(7)" value="<img link = " jtp.png" />
+                <img src="https://i.ibb.co/D72JHYw/c.png" alt="c" border="0" style="width: 15px; height: 15px;"> &lt;
+                img link = "jtp.png" &gt; </label>
+            <br>
+            <label for="o4(7)"><input type="radio" name="q7" id="o4(7)" value="<img src = " jtp.png" /> <img
+                    src="https://i.ibb.co/mSNbqMX/d.png" alt="d" border="0" style="width: 15px; height: 15px;"> &lt; img
+                src = "jtp.png" &gt; </label><br>
+        </blockquote>
+
+        <p><b>
+
+                <hr><br>
+
+                <big> Q8) </big> <span class="points">2 Points</span>
+                <br>
+                <br>The &lt; hr &gt; tag in HTML is used for <br>
+            </b>
+
+        <blockquote>
+
+            <label for="o1(8)"><input type="radio" name="q8" id="o1(8)" value="new line
+"> <img src="https://i.ibb.co/zfsbr8N/a.png" alt="a" border="0" style="width: 15px; height: 15px;"> new line </label>
+            <br>
+
+            <label for="o2(8)"><input type="radio" name="q8" id="o2(8)" value="vertical ruler"> <img
+                    src="https://i.ibb.co/cFRFVBc/b.png" alt="b" border="0" style="width: 15px; height: 15px;"> vertical
+                ruler </label><br>
+
+            <label for="o3(8)"><input type="radio" name="q8" id="o3(8)" value="new paragraph"> <img
+                    src="https://i.ibb.co/D72JHYw/c.png" alt="c" border="0" style="width: 15px; height: 15px;"> new
+                paragraph </label><br>
+            <label for="o4(8)"><input type="radio" name="q8" id="o4(8)" value="horizontal ruler"> <img
+                    src="https://i.ibb.co/mSNbqMX/d.png" alt="d" border="0" style="width: 15px; height: 15px;">
+                horizontal ruler </label><br>
+        </blockquote>
+
+        <p><b>
+
+                <hr><br>
+
+                <big> Q9) </big> <span class="points">2 Points</span>
+                <br>
+                <br>Which of the following HTML tag is used to display the text with scrolling effect?
+                <br>
+            </b>
+
+        <blockquote>
+
+            <label for="o1(9)"><input type="radio" name="q9" id="o1(9)" value="<marquee>
+"> <img src="https://i.ibb.co/zfsbr8N/a.png" alt="a" border="0" style="width: 15px; height: 15px;"> &lt; marquee &gt;
+            </label>
+            <br>
+
+            <label for="o2(9)"><input type="radio" name="q9" id="o2(9)" value="<scroll>
+"> <img src="https://i.ibb.co/cFRFVBc/b.png" alt="b" border="0" style="width: 15px; height: 15px;"> &lt; scroll &gt;
+            </label>
+            <br>
+
+            <label for="o3(9)"><input type="radio" name="q9" id="o3(9)" value="<div>
+"> <img src="https://i.ibb.co/D72JHYw/c.png" alt="c" border="0" style="width: 15px; height: 15px;"> &lt; div &gt;
+            </label>
+            <br>
+            <label for="o4(9)"><input type="radio" name="q9" id="o4(9)" value="None of the above"> <img
+                    src="https://i.ibb.co/mSNbqMX/d.png" alt="d" border="0" style="width: 15px; height: 15px;"> None of
+                the above </label><br>
+        </blockquote>
+
+        <p><b>
+
+                <hr><br>
+
+                <big> Q10) </big> <span class="points">2 Points</span>
+                <br>
+                <br>Which of the following HTML tag is the special formatting tag?
+                <br>
+            </b>
+
+        <blockquote>
+
+            <label for="o1(10)"><input type="radio" name="q10" id="o1(10)" value="<p>
+"> <img src="https://i.ibb.co/zfsbr8N/a.png" alt="a" border="0" style="width: 15px; height: 15px;"> &lt; p &gt;
+            </label>
+            <br>
+
+            <label for="o2(10)"><input type="radio" name="q10" id="o2(10)" value="<b>"> <img
+                    src="https://i.ibb.co/cFRFVBc/b.png" alt="b" border="0" style="width: 15px; height: 15px;"> &lt; b
+                &gt; </label><br>
+
+            <label for="o3(10)"><input type="radio" name="q10" id="o3(10)" value="<pre>"> <img
+                    src="https://i.ibb.co/D72JHYw/c.png" alt="c" border="0" style="width: 15px; height: 15px;"> &lt; pre
+                &gt; </label> <br>
+            <label for="o4(10)"><input type="radio" name="q10" id="o4(10)" value="None of the above"> <img
+                    src="https://i.ibb.co/mSNbqMX/d.png" alt="d" border="0" style="width: 15px; height: 15px;"> None of
+                the above </label><br>
+        </blockquote>
+
+        <p><b>
+
+                <hr><br>
+    </div>
+
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <input type="submit" id="button" value="Submit Test" onclick="myfunction2()">
+    &nbsp;&nbsp;&nbsp;
+    <input type="button" id="button" value="End Test" onclick="myfunction1()">
+    <p>
+
+    <p>
+
+    <div class="arrow-btn">
+        <a href="#" class="fas fa-upload"></a>
+    </div>
+    <script type="text/javascript">
+        function generatepoints() {
+            let ele = document.getElementsByClassName("points");
+            for (var i = 0; i < ele.length; i++) {
+                let random = Math.floor(Math.random() * (3 - 1 + 1)) + 1;
+                if (random == 1) {
+                    ele[i].innerHTML = random + " Point";
+                } else {
+                    ele[i].innerHTML = random + " Points";
+                }
+            }
+        }
+        generatepoints();
+    </script>
+</body>
+
+</html>

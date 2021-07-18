@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="publicHome/favicon.svg" />
+  <title>QuizHub</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Reem+Kufi:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.min.css"
+    integrity="sha512-4rPgyv5iG0PZw8E+oRdfN/Gq+yilzt9rQ8Yci2jJ15rAyBmF0HBE4wFjBkoB72cxBeg63uobaj1UcNt/scV93w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <style>
+    html {
+      height: 100%;
+      width: 100%;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to bottom right, #f761a1, #8c1bab);
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+    }
+
+    header {
+      width: 96%;
+      max-height: fit-content;
+      display: flex;
+      padding: 10px 28px;
+      flex-direction: row;
+      justify-content: space-between;
+      color: white;
+      align-items: center;
+      backdrop-filter: blur(10px);
+      position: fixed;
+      top: 0px;
+      /* right: 0px; */
+      left: 0;
+      z-index: 100;
+    }
+
+    .logo {
+      font-size: 40px;
+      font-weight: bold;
+      font-family: "Reem Kufi", sans-serif;
+    }
+
+    .logo a {
+      text-decoration: none;
+      color: white;
+    }
+
+    .signup-or-profile {
+      font-family: "Raleway", sans-serif;
+      font-size: 24px;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+    }
+
+    .headerText a {
+      text-decoration: none;
+      color: white;
+    }
+
+    .profileLogo {
+      padding: 0 5px;
+    }
+
+    footer {
+      position: fixed;
+      bottom: 0px;
+      left: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      color: white;
+      font-family: "Raleway", sans-serif;
+      width: 97%;
+      backdrop-filter: blur(10px);
+      z-index: 100;
+    }
+
+    .copyright {
+      display: flex;
+      align-items: center;
+    }
+
+    .copyrightPNG {
+      padding: 0 5px;
+    }
+
+    .copyrightTxt a {
+      text-decoration: none;
+      color: white;
+    }
+
+    .externalLinks {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .social {
+      width: 10%;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .socialIcon {
+      height: 32px;
+      width: 32px;
+    }
+
+    main {
+      display: flex;
+      height: 100vh;
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+      display: none;
+    }
+
+    .Card {
+      z-index: -10;
+      margin: 0 240px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 70vh;
+      width: 65vw;
+      border-radius: 20px;
+      background-color: white;
+      box-shadow: 0 0 10px gray;
+    }
+
+    .Card a {
+      color: #f761a1;
+    }
+
+    .section {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    span {
+      background-color: white !important;
+      margin: 0 80px;
+    }
+
+    #fp-nav {
+      font-family: "Raleway", sans-serif;
+      font-weight: bold;
+    }
+
+    .heroTxt {
+      font-family: "Reem Kufi", sans-serif;
+      color: #f761a1;
+      font-size: 48px;
+      font-weight: bold;
+      padding: 0 40px;
+    }
+
+    .cardTxt,
+    .cardImg {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .cardTxt {
+      justify-content: space-evenly;
+    }
+
+    .cardTitle {
+      font-family: "Reem Kufi", sans-serif;
+      color: #f761a1;
+      font-size: 48px;
+      font-weight: bold;
+      text-align: left;
+      margin: 10px 30px;
+      padding: 20px;
+    }
+
+    .cardSubTxt {
+      padding: 10px 50px 10px 70px;
+      font-family: "Red Hat Text", sans-serif;
+      font-size: 24px;
+      color: grey;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="logo"><a href="index.html">QuizHub</a></div>
+    <div class="signup-or-profile">
+      <div class="headerText"><a href="signin.html">Login/Signup</a></div>
+      <img class="profileLogo" src="publicHome/login.png" alt="login" />
+    </div>
+  </header>
+
+  <main>
+    <div id="fullpage">
+      <div class="section">
+        <div class="Card quizhub">
+          <div class="heroTxt">Tests. <br />Simplified.</div>
+          <div class="heroAni">
+            <lottie-player src="https://assets4.lottiefiles.com/packages/lf20_s9h0qolf.json" background="transparent"
+              speed="1" style="width: 300px; height: 300px" autoplay></lottie-player>
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <div class="Card tests">
+          <div class="cardTxt">
+            <div class="cardTitle">Tests</div>
+            <div class="cardSubTxt">
+              With a fast and modern test windows taking tests is a breeze.
+            </div>
+          </div>
+          <div class="cardImg">
+            <img src="publicHome/test.svg" alt="tests" srcset="" />
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <div class="Card questions">
+          <div class="cardTxt">
+            <div class="cardTitle">Questions</div>
+            <div class="cardSubTxt">
+              Supports a wide variety of questions like MCQ, Numericals, Match and rationale.
+            </div>
+          </div>
+          <div class="cardImg">
+            <img src="publicHome/question.svg" alt="questions" srcset="" />
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <div class="Card answers">
+          <div class="cardTxt">
+            <div class="cardTitle">Answers</div>
+            <div class="cardSubTxt">
+              With glitch free tested test windows your answers are never lost.
+            </div>
+          </div>
+          <div class="cardImg">
+            <img src="publicHome/answer.svg" alt="answers" srcset="" />
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <div class="Card why">
+          <div class="cardTxt">
+            <div class="cardTitle">...and WHY</div>
+            <div class="cardSubTxt">
+              At Quizhub.org we believe that taking tests need not be boring, old fashioned and happen on websites made
+              in ice ages. <br><br><a
+              href="About Us.html">About Us</a>
+            </div>
+          </div>
+          <div class="cardImg">
+            <img src="publicHome/more.svg" alt="more" srcset="" />
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <div class="Card why">
+          <div class="cardTxt">
+            <div class="cardTitle">24/7 Support</div>
+            <div class="cardSubTxt">
+              We provide 24/7 human support for smooth test conduction no matter the country you're from. <br><br><a
+                href="Contact Us.html">Contact Us</a>
+            </div>
+          </div>
+          <div class="cardImg">
+            <img src="publicHome/support.svg" alt="more" srcset="" />
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <div class="Card privacy">
+          <div class="cardTxt">
+            <div class="cardTitle">Privacy</div>
+            <div class="cardSubTxt">
+              At QuizHub.org we also value your privacy and the data are fully confidential. <br><br><a href="privacypolicy.html">Know
+                more...</a>
+            </div>
+          </div>
+          <div class="cardImg">
+            <img src="publicHome/privacy.svg" alt="more" srcset="" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="social">
+      <div class="socialIcon">
+        <a href="facebook.com">
+          <img src="publicHome/facebook.svg" alt="Facebook" srcset="" />
+        </a>
+      </div>
+      <div class="socialIcon">
+        <a href="twitter.com">
+          <img src="publicHome/twitter.svg" alt="Twitter" srcset="" />
+        </a>
+      </div>
+      <div class="socialIcon">
+        <a href="https://github.com/codizt/QuizHub-Home" target="_blank">
+          <img src="publicHome/github.svg" alt="Github" srcset="" />
+        </a>
+      </div>
+    </div>
+    <div class="copyright">
+      <img class="copyrightPNG" src="publicHome/copyright.png" alt="Copyright" />
+      <div class="copyrightTxt">
+        <a href="privacypolicy.html" style="float: right;">Copyright</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.extensions.min.js"
+    integrity="sha512-v0jjVvFpZqb1BcXhgLbaBDRKwZ09IpWFZL5NHTNbW9MlSjhZihkxEz2uNeMGd6HuK1qnSEL6JdyTr24ZHlgKow=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+  <script>
+    new fullpage("#fullpage", {
+      //options here
+      // autoScrolling: true,
+      scrollHorizontally: true,
+      lockAnchors: true,
+      navigation: true,
+      navigationPosition: "right",
+      navigationTooltips: [
+        "Quizhub",
+        "Tests",
+        "Questions",
+        "Solutions",
+        "...and Why",
+        "Support",
+        "Privacy?",
+      ],
+      showActiveTooltip: false,
+      slidesNavigation: false,
+      easingcss3: "ease",
+      loopBottom: true,
+      loopTop: true,
+    });
+
+
+    setTimeout(() => {
+      document.querySelector("main").style.display = 'block';
+      document.querySelector("main").style.transition = 'all 2s';
+    }, 500);
+  </script>
+</body>
+
+</html>

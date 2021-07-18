@@ -1,0 +1,382 @@
+<html>
+
+<head>
+
+  <title>Physics Test </title>
+  <style>
+    hr {
+      width: 300px;
+      float: left;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .questions {
+      margin-left: 300px;
+      margin-right: 300px;
+      font-size: 20px;
+    }
+
+    .heading {
+      align-items: center;
+      background-color: #00A7F4;
+      padding: 0 px;
+      margin-left: 600px;
+      margin-right: 700px;
+      text-align: center;
+      color: white;
+      width: 250px;
+      text-transform: uppercase;
+      font-weight: 900;
+    }
+
+    .points {
+      margin-left: 600px;
+      padding: 5px;
+      padding-left: 1px;
+      padding-right: 1px;
+      background-color: cyan;
+    }
+
+    .timer {
+      margin: 20px;
+      font-size: 20px;
+      position: fixed;
+      font-weight: bold;
+    }
+
+    #text-timer {
+      color: green;
+    }
+    
+  </style>
+  <link rel="icon" href="https://i.ibb.co/sb8N2bt/Quiz-Zone-Logo-Tile-192.png" type="image/png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="button.css">
+  <link rel="stylesheet" href="arrbtn.css">
+  <script src="https://kit.fontawesome.com/15f8b2b9b3.js" crossorigin="anonymous"></script>
+  <script>
+    function myfunction1() {
+      var y = confirm('Press OK To End The Test');
+      if (y == true) {
+        window.location.replace("studenttests.html");
+      } else {
+        return false;
+      }
+    }
+
+    function myfunction2() {
+      var z = confirm('Press OK To Submit The Test');
+      if (z == true) {
+        window.location.replace("TestEnd.html");
+      } else {
+        return false;
+      }
+    }
+  </script>
+</head>
+
+<body bgcolor="white"><br>
+  <div class="timer">
+    <text id="text-timer"> Time Left: </text><span id="countdown"></span>
+  </div>
+  <script type="text/javascript" src="timer.js"></script>
+  <div class="heading">
+    <center>
+      <h1>Physics Quiz</h1>
+    </center>
+  </div>
+  <br><br>
+  <div class="questions">
+    <p>
+
+    <p>
+
+      <b> <big> Q1) </big><span class="points">2 Points</span>
+        <br>
+        <br>Coulomb law is only aplicable for &nbsp; ___________________<br></b>
+
+    <blockquote>
+
+      <label for="o1(1)"><input type="radio" name="q1" id="o1(1)" value="Point charge at rest"> <img
+          src="https://i.ibb.co/zfsbr8N/a.png" alt="a" border="0" style="width: 15px; height: 15px;"> Point charge at
+        rest </label><br>
+
+      <label for="o2(1)"><input type="radio" name="q1" id="o2(1)" value="Charges in arbitrary shape"> <img
+          src="https://i.ibb.co/cFRFVBc/b.png" alt="b" border="0" style="width: 15px; height: 15px;"> Charges in
+        arbitrary shape </label><br>
+
+      <label for="o3(1)"><input type="radio" name="q1" id="o3(1)" value="Calculating charge on big planets"> <img
+          src="https://i.ibb.co/D72JHYw/c.png" alt="c" border="0" style="width: 15px; height: 15px;"> Calculating charge
+        on big planets </label><br>
+
+    </blockquote>
+
+    <p>
+
+      <hr><br>
+      <b>
+        <big> Q2) </big> <span class="points">2 Points</span>
+        <br>
+        <br>Coulomb law is employed in &nbsp; ___________________<br></b>
+
+    <blockquote>
+
+      <label for="o1(2)"><input type="radio" name="q2" id="o1(2)" value="don't come"> <img
+          src="https://i.ibb.co/zfsbr8N/a.png" alt="a" border="0" style="width: 15px; height: 15px;"> Electrostatics
+      </label><br>
+
+      <label for="o2(2)"><input type="radio" name="q2" id="o2(2)" value="doesn't come"> <img
+          src="https://i.ibb.co/cFRFVBc/b.png" alt="b" border="0" style="width: 15px; height: 15px;"> Magnetostatics
+      </label><br>
+
+      <label for="o3(2)"><input type="radio" name="q2" id="o3(2)" value="doesn't comes"> <img
+          src="https://i.ibb.co/D72JHYw/c.png" alt="c" border="0" style="width: 15px; height: 15px;"> Electromagnetics
+      </label><br>
+
+    </blockquote>
+
+    <p><b>
+
+        <hr><br>
+
+        <big> Q3) </big> <span class="points">3 Points</span>
+        <br>
+        <br>Find the force between 2C and -1C separated by a distance 1m in air(in newton).<br>
+      </b>
+
+    <blockquote>
+
+      <label for="o1(3)"><input type="radio" name="q3" id="o1(3)" value="18 X 10^6"> <img
+          src="https://i.ibb.co/zfsbr8N/a.png" alt="a" border="0" style="width: 15px; height: 15px;"> 18 X 10^6
+      </label><br>
+
+      <label for="o2(3)"><input type="radio" name="q3" id="o2(3)" value="-18 X 10^6"> <img
+          src="https://i.ibb.co/cFRFVBc/b.png" alt="b" border="0" style="width: 15px; height: 15px;"> -18 X 10^6
+      </label><br>
+
+      <label for="o3(3)"><input type="radio" name="q3" id="o3(3)" value="18 X 10^(-6)"> <img
+          src="https://i.ibb.co/D72JHYw/c.png" alt="c" border="0" style="width: 15px; height: 15px;"> 18 X 10^(-6)
+      </label><br>
+
+    </blockquote>
+
+    <p><b>
+
+        <hr><br>
+
+        <big> Q4) </big> <span class="points">3 Points</span>
+        <br>
+        <br>Two charges 1C and -4C exists in air. What is the direction of force?<br>
+      </b>
+
+    <blockquote>
+
+      <label for="o1(4)"><input type="radio" name="q4" id="o1(4)" value="Away from 1C"> <img
+          src="https://i.ibb.co/zfsbr8N/a.png" alt="a" border="0" style="width: 15px; height: 15px;"> Away from 1C
+      </label><br>
+
+      <label for="o2(4)"><input type="radio" name="q4" id="o2(4)" value="Away from -4C"> <img
+          src="https://i.ibb.co/cFRFVBc/b.png" alt="b" border="0" style="width: 15px; height: 15px;"> Away from -4C
+      </label><br>
+
+      <label for="o3(4)"><input type="radio" name="q4" id="o3(4)" value="don't"> <img
+          src="https://i.ibb.co/D72JHYw/c.png" alt="c" border="0" style="width: 15px; height: 15px;"> From 1C to -4C
+      </label><br>
+
+    </blockquote>
+
+    <p><b>
+
+        <hr><br>
+
+        <big> Q5) </big> <span class="points">2 Points</span>
+        <br>
+        <br>The Coulomb law is an implication of which law?<br>
+      </b>
+
+    <blockquote>
+
+      <label for="o1(5)"><input type="radio" name="q5" id="o1(5)" value="Ampere law"> <img
+          src="https://i.ibb.co/zfsbr8N/a.png" alt="a" border="0" style="width: 15px; height: 15px;"> Ampere law
+      </label><br>
+
+      <label for="o2(5)"><input type="radio" name="q5" id="o2(5)" value="Gauss law"> <img
+          src="https://i.ibb.co/cFRFVBc/b.png" alt="b" border="0" style="width: 15px; height: 15px;"> Gauss law
+      </label><br>
+
+      <label for="o3(5)"><input type="radio" name="q5" id="o3(5)" value="Biot Savart law"> <img
+          src="https://i.ibb.co/D72JHYw/c.png" alt="c" border="0" style="width: 15px; height: 15px;"> Biot Savart law
+      </label><br>
+
+    </blockquote>
+
+    <p><b>
+
+        <hr><br>
+
+        <big> Q6) </big> <span class="points">2 Points</span>
+        <br>
+        <br>For a charge Q1, the effect of charge Q2 on Q1 will be<br>
+      </b>
+
+    <blockquote>
+
+      <label for="o1(6)"><input type="radio" name="q6" id="o1(6)" value="F1 = F2"> <img
+          src="https://i.ibb.co/zfsbr8N/a.png" alt="a" border="0" style="width: 15px; height: 15px;"> F1 = F2
+      </label><br>
+
+      <label for="o2(6)"><input type="radio" name="q6" id="o2(6)" value="F1 = -F2"> <img
+          src="https://i.ibb.co/cFRFVBc/b.png" alt="b" border="0" style="width: 15px; height: 15px;"> F1 = -F2
+      </label><br>
+
+      <label for="o3(6)"><input type="radio" name="q6" id="o3(6)" value="F1 = F2 = 0"> <img
+          src="https://i.ibb.co/D72JHYw/c.png" alt="c" border="0" style="width: 15px; height: 15px;"> F1 = F2 = 0
+      </label><br>
+
+    </blockquote>
+
+    <p><b>
+
+        <hr><br>
+
+        <big> Q7) </big> <span class="points">2 Points</span>
+        <br>
+        <br>When a brass sheet is placed between two charges that are placed at a certain distance, the force will
+        &nbsp; ___________________
+        <br>
+      </b>
+
+    <blockquote>
+
+      <label for="o1(7)"><input type="radio" name="q7" id="o1(7)" value="Decrease"> <img
+          src="https://i.ibb.co/zfsbr8N/a.png" alt="a" border="0" style="width: 15px; height: 15px;"> Decrease
+      </label><br>
+
+      <label for="o2(7)"><input type="radio" name="q7" id="o2(7)" value="Increase"> <img
+          src="https://i.ibb.co/cFRFVBc/b.png" alt="b" border="0" style="width: 15px; height: 15px;"> Increase
+      </label><br>
+
+      <label for="o3(7)"><input type="radio" name="q7" id="o3(7)" value="Remains Same
+"> <img src="https://i.ibb.co/D72JHYw/c.png" alt="c" border="0" style="width: 15px; height: 15px;"> Remains Same
+      </label>
+      <br>
+
+    </blockquote>
+
+    <p><b>
+
+        <hr><br>
+
+        <big> Q8) </big> <span class="points">2 Points</span>
+        <br>
+        <br>Electric field terminates at &nbsp; ___________________ <br>
+      </b>
+
+    <blockquote>
+
+      <label for="o1(8)"><input type="radio" name="q8" id="o1(8)" value="Negative charge
+"> <img src="https://i.ibb.co/zfsbr8N/a.png" alt="a" border="0" style="width: 15px; height: 15px;"> Negative charge
+      </label>
+      <br>
+
+      <label for="o2(8)"><input type="radio" name="q8" id="o2(8)" value="Positive charge"> <img
+          src="https://i.ibb.co/cFRFVBc/b.png" alt="b" border="0" style="width: 15px; height: 15px;"> Positive charge
+      </label><br>
+
+      <label for="o3(8)"><input type="radio" name="q8" id="o3(8)" value="Neither positive nor negative"> <img
+          src="https://i.ibb.co/D72JHYw/c.png" alt="c" border="0" style="width: 15px; height: 15px;"> Neither positive
+        nor negative </label><br>
+
+    </blockquote>
+
+    <p><b>
+
+        <hr><br>
+
+        <big> Q9) </big> <span class="points">2 Points</span>
+        <br>
+        <br>The direction of electric field intensity at a point due to a negative charge is &nbsp; ___________________
+        <br>
+      </b>
+
+    <blockquote>
+
+      <label for="o1(9)"><input type="radio" name="q9" id="o1(9)" value="perpendicular to the line joining the point and the charge
+"> <img src="https://i.ibb.co/zfsbr8N/a.png" alt="a" border="0" style="width: 15px; height: 15px;"> perpendicular to
+        the line joining the point and the charge </label>
+      <br>
+
+      <label for="o2(9)"><input type="radio" name="q9" id="o2(9)" value="inclined to the line joining the point and the charge
+"> <img src="https://i.ibb.co/cFRFVBc/b.png" alt="b" border="0" style="width: 15px; height: 15px;"> inclined to the
+        line joining the point and the charge </label>
+      <br>
+
+      <label for="o3(9)"><input type="radio" name="q9" id="o3(9)" value="radial and towards the charge
+"> <img src="https://i.ibb.co/D72JHYw/c.png" alt="c" border="0" style="width: 15px; height: 15px;"> radial and towards
+        the charge </label>
+      <br>
+
+    </blockquote>
+
+    <p><b>
+
+        <hr><br>
+
+        <big> Q10) </big> <span class="points">3 Points</span>
+        <br>
+        <br>The work done in bringing a unit positive charge from infinite distance to a point at distance x from a
+        positive charge Q is W. Then the potential at that point is &nbsp; ___________________
+        <br>
+      </b>
+
+    <blockquote>
+
+      <label for="o1(10)"><input type="radio" name="q10" id="o1(10)" value="W/x"><img
+          src="https://i.ibb.co/zfsbr8N/a.png" alt="a" border="0" style="width: 15px; height: 15px;"> W/x </label>
+      <br>
+
+      <label for="o2(10)"><input type="radio" name="q10" id="o2(10)" value="WQ"> <img
+          src="https://i.ibb.co/cFRFVBc/b.png" alt="b" border="0" style="width: 15px; height: 15px;"> WQ </label><br>
+
+      <label for="o3(10)"><input type="radio" name="q10" id="o3(10)" value="W"> <img
+          src="https://i.ibb.co/D72JHYw/c.png" alt="c" border="0" style="width: 15px; height: 15px;"> W </label><br>
+
+    </blockquote>
+
+    <p><b>
+
+        <hr><br>
+  </div>
+
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <input type="submit" id="button" value="Submit Test" onclick="myfunction2()" style="margin-left: 50px;">
+  &nbsp;&nbsp;&nbsp;
+  <input type="button" id="button" value="End Test" onclick="myfunction1()">
+
+  <p>
+
+  <div class="arrow-btn">
+    <a href="#" class="fas fa-upload"></a>
+  </div>
+  <script type="text/javascript">
+    function generatepoints() {
+      let ele = document.getElementsByClassName("points");
+      for (var i = 0; i < ele.length; i++) {
+        let random = Math.floor(Math.random() * (3 - 1 + 1)) + 1;
+        if (random == 1) {
+          ele[i].innerHTML = random + " Point";
+        } else {
+          ele[i].innerHTML = random + " Points";
+        }
+      }
+    }
+    generatepoints();
+  </script>
+</body>
+
+</html>

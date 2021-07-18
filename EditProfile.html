@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudentProfile | Quiz Zone</title>
+    <link rel="icon" href="https://i.ibb.co/sb8N2bt/Quiz-Zone-Logo-Tile-192.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="button.css">
+    <link rel="stylesheet" href="arrbtn.css">
+    <script src="https://kit.fontawesome.com/15f8b2b9b3.js" crossorigin="anonymous"></script>
+    <style>
+        html{
+            scroll-behavior: smooth;
+        }
+
+        body{
+            margin: 0;
+            padding: 0;
+            background-color: #D8D8D8;
+        }
+
+        nav{
+            height: 80px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            box-shadow: 0 0 15px gray;
+        }
+
+        nav .logo{
+            padding: 20px;
+        }
+
+        .rollno{
+            padding: 30px;
+            font-size: 20px;
+            font-weight: bold;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+
+        .create{
+            margin-left: 380px;
+            background-color: white;
+            width: 750px;
+            height: 560px;
+            padding-left: 20px;
+            padding-top: 2px;
+            border-radius: 20px;
+            
+        }
+
+        #icon{
+            position: relative;
+            left: 1px;
+            top: 2px;
+            font-size: 20px;
+        }
+
+        table{
+            margin: 50px;
+        }
+
+        .studentname{
+            padding-top: 60px;
+            text-align: center;
+        }
+
+        .rollno1{
+            text-align: center;
+            padding: 0px;
+            color: #B5B5B5;
+        }
+
+        textarea{
+            resize: none;
+        }
+
+        .content{
+            display: flex;
+        }
+
+        .btn2{
+        background-color: white;
+        border: none;
+        color: black;
+        padding: 15px 28px;
+        text-align: center;
+        font-size: 16px;
+        margin-left: 650px;
+        margin-top: 10px;
+        border-radius: 10px;
+        font-size: 20px;
+        font-weight: 600;
+        }
+
+        .btn2:hover{
+            background-color: cyan;
+        }
+
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo"><a href="home.html"><img src="https://i.ibb.co/5cbTc9X/Quiz-Hub-Black.png" alt="Quiz-Zone-logo-black" border="0"></a></div>
+        <div class="rollno">
+            CB.EN.U4CSE20621 <i class="fas fa-user-circle"></i>
+        </div>
+    </nav><br>
+    <div class="create">
+        <div class="studentname">
+            <h2>G Harshavardhan Tadikonda</h2>
+        </div>
+        <div class="rollno1">
+            <h3>CB.EN.U4CSE20621</h3>
+        </div> <br><br>
+        <div class="content">
+            <div class="content1">
+        <text style="font-size: 20px; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; padding-left: 30px;"> Name </text>
+        <textarea name="name" id="" cols="20" rows="1" style="margin-left: 50px;"></textarea> <br><br><br>
+        <text style="font-size: 20px; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; padding-left: 30px;"> ID </text>
+        <textarea name="ID" id="" cols="20" rows="1" style="margin-left: 80px;"></textarea> <br><br><br>
+        <text style="font-size: 20px; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; padding-left: 30px;"> DOB </text>
+        <textarea name="DOB" id="" cols="20" rows="1" style="margin-left: 60px;"></textarea> <br><br><br>
+        <text style="font-size: 20px; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; padding-left: 30px;"> Address </text>
+        <div class="address">
+        <textarea name="Address" id="" cols="20" rows="8" style="margin-left: 130px;"></textarea></div>
+    </div>
+    <div class="content2">
+        <text style="font-size: 20px; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; padding-left: 80px;"> Email </text>
+        <textarea name="Email" id="" cols="20" rows="1" style="margin-left: 60px;"></textarea> <br><br><br>
+        <text style="font-size: 20px; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; padding-left: 80px;"> Mobile No. </text>
+        <textarea name="Mobile Number" id="" cols="20" rows="1" style="margin-left: 20px;"></textarea> <br><br><br>
+    </div>
+    </div>
+    </div>
+    <input type="submit" class="btn2" value="Edit Profile" name="" id="">
+    </body>
+</html>

@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher_Profile | Quiz Zone </title>
+    <link rel="icon" href="https://i.ibb.co/sb8N2bt/Quiz-Zone-Logo-Tile-192.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="button.css">
+    <link rel="stylesheet" href="arrbtn.css">
+    <script src="https://kit.fontawesome.com/15f8b2b9b3.js" crossorigin="anonymous"></script>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            background-color: #D8D8D8;
+        }
+
+        #footer{
+            background: #303036;
+            color: #d3d3d3;
+            height: 400px;
+            width: 100%;
+            position: relative;
+            box-shadow: 0 0 15px gray;
+        }
+
+        #footer-content{
+            height: 350px;
+           display: flex;
+           flex-wrap: wrap;
+            justify-content: left;
+        }
+
+        #footer-content ul li a{
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 300;
+            color: #bbbbbb;
+            transition: all 0.3s ease;
+        }
+
+        #footer-content ul li a:hover{
+         padding-left: 15px;
+        }
+
+        #footer-bottom{
+            background: #343A40;
+            color: #686868;
+            height: 40px;
+            width: 100%;
+            text-align: center;
+            position:absolute;
+            bottom: 0px;
+            left: 0px;
+            padding-top: 15px;
+        }
+
+        #footer a, .arrow-btn a{
+            transition: all 0.3s ease;
+            padding: 8px; 
+            text-decoration: none;
+        }
+
+        #footer a:hover{
+            color: cyan;
+            padding-left: 15px;
+        }
+
+        nav .logo{
+            padding: 30px;
+            font-size: 30px;
+            color: white;
+        }
+
+        nav{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            background-color: #303036;
+            width: 100%;
+            height: 70px;
+            align-items: center;
+            box-shadow: 0 0 15px gray;
+        }
+
+        nav ul{
+            color: white;
+            text-decoration: none;
+            padding-right: 6px;
+            padding-bottom: 40px;
+        }
+
+        nav li:hover{
+            color: cyan;
+        }
+
+        nav ul li{
+            color: white;
+            list-style: none;
+            padding-top: 45px;
+            padding-right: 30px;
+            float: left;
+            position: relative;
+        }
+
+        nav ul li:hover{
+            box-shadow: 0px 0.5px cyan;      
+        }
+
+        #teacherprofile-heading{
+            align-items: center;
+            background-color: #00A7F4;
+            margin-left: 705px;
+            margin-right: 685px;
+            height: 30px;
+            text-align: center;
+            padding-top: 12px;
+            padding-bottom: 6px;
+            padding-left: 4px;
+            padding-right: 6px;
+            color: white;
+            width: 150px;
+        }
+
+.container {
+  height: 90vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 3rem;
+}
+
+.profile-img {
+  margin-left: 2rem;
+}
+
+.profile-img img {
+  border-radius: 50%;
+  height: 230px;
+  width: 230px;
+  -webkit-box-shadow: 5px 5px 5px #35363f;
+          box-shadow: 5px 5px 5px #35363f;
+}
+
+.personal-info {
+ 
+  border: 2px solid whitesmoke;
+  border-radius: 1rem;
+  font-size: 1.5rem;
+  padding: 1rem 0.3rem;
+  color: black;
+ border-color: black;
+ -webkit-box-shadow: 5px 5px #35363f;
+          box-shadow: 5px 5px #35363f;
+}
+
+.main {
+  width: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 2rem;
+  color: black;
+  border-color: black;
+}
+
+.desc {
+  margin: 0rem;
+  border: 2px solid whitesmoke;
+  border-radius: 1rem;
+  font-size: 1.5rem;
+  padding: 1.1rem 0.5rem;
+  margin-right: 160px;
+  color: black;
+  -webkit-backdrop-filter: blur(200px);
+          backdrop-filter: blur(200px);
+  -webkit-box-shadow: 5px 5px #35363f;
+          box-shadow: 5px 5px #35363f;
+          border-color: black;
+}
+
+.courses-and-tests {
+  margin-top: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0;
+  color: black;
+  border-color: black;
+}
+
+.courses {
+  width: 80%;
+  text-align: center;
+  color: black;
+  margin: 0rem;
+  border: 2px solid whitesmoke;
+  border-radius: 1rem;
+  font-size: 1.5rem;
+  padding: 0.5rem 0.5rem;
+  -webkit-backdrop-filter: blur(200px);
+          backdrop-filter: blur(200px);
+  -webkit-box-shadow: 5px 5px #35363f;
+          box-shadow: 5px 5px #35363f;
+          border-color: black;
+}
+
+.courses ul {
+  text-align: left;
+  font-size: 1.5rem;
+}
+
+.tests {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-left: 1rem;
+  margin-bottom: 1rem;
+  color: black;
+  border-color: black;
+}
+
+.create,
+.view {
+  text-align: center;
+  margin-top: 35px;
+  width: 30%;
+  height: 20%;
+  border: 2px solid whitesmoke;
+  border-radius: 1rem;
+  font-size: 1rem;
+  padding: 0.5rem 0.5rem;
+  color: whitesmoke;
+  -webkit-backdrop-filter: blur(200px);
+          backdrop-filter: blur(200px);
+  -webkit-box-shadow: 5px 5px #35363f;
+          box-shadow: 5px 5px #35363f;
+    color: black;
+    border-color: black;
+    margin-left: 160px;
+}
+
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo"><a href="index.html"><img src="https://i.ibb.co/c81F882/Quiz-Hub-White.png" alt="Quiz-Zone-logo-white" border="0"></a></div>
+            <ul>
+                <a href="index.html"><li>Home</li></a>
+                <a href="signin.html"><li>Sign In</li></a>
+                <a href="#"><li>Online Tests</li></a>
+                <a href="studenttests.html"><li>Test Details</li></a>
+                <a href="About Us.html" target="_blank"><li>About Us</li></a>
+                <a href="Contact Us.html" target="_blank"><li>Contact Us</li></a>
+                <a href="#footer"><li>Help & Support</li></a>
+            </ul>
+    </nav><br>
+    <div id="teacherprofile-heading"><big><b> Teacher Profile </b></big></div><br>
+    <div class="container">
+        <div class="info"><br><br>
+            <div class="profile-img"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQM4vQketUy1EKQUOSpcXvn3wGiChyjzgZjhQ&usqp=CAU" alt="Professor"></div>
+            <br><br>
+            <div class="personal-info">
+                <ul>
+                    <li><strong>Sergio Marquina</strong><br>Professor</li>
+                    <li>Dept. of Economics</li>
+                    <li>sergio@lacasadepapel.edu</li>
+                </ul>
+            </div>
+        </div>
+        <div class="main">
+            <div class="desc">
+                <h3>Description</h3>
+                In general, the professor is a calm, disciplined and contained personality. If we observe closely, we can see that he
+                almost always closes his body with his hands. He tries to hide his emotions with this mask- and succeeds to some extent
+                as well. The professor is a complete slave to his habits and routines.
+            </div>
+            <div class="courses-and-tests">
+                <div class="courses">
+                    <h3>Courses Taken</h3>
+                    <ul>
+                        <li>Economics of money and banking.</li>
+                        <li>Economics of Firm Stratergy.</li>
+                        <li>Macro Economics.</li>
+                        <li>Fiscal Economics.</li>
+                    </ul>
+                </div>
+                <div class="tests">
+                    <div class="create"><a href="TestSetting.html"><input type="submit" id="button" value="Create Tests"></a></div>
+                    <div class="view"><a href="studenttests.html"> <input type="submit" id="button" value="View Tests"> </a></div>
+                </div>
+            </div>
+        </div>
+        </div>
+    <div id="footer">
+        <div id="footer-content">
+        <div class="footer-section about"><h2 style="padding-inline-start: 100px;">Our Services</h2>
+            <ul style="list-style-type: disc; list-style-position: inside; padding-inline-start: 100px; line-height: 35px;">
+                <li><a href="#">Exclusive Test</a></li>
+                <li><a href="#">Test Categories</a></li>
+                <li><a href="#">Private Tests</a></li>
+                <li><a href="#">Group Tests</a></li>
+                <li><a href="Contact Us.html" target="_blank">Contact Us</a></li>
+                <li><a href="privacypolicy.html" target="_blank">Terms & Conditions</a></li>
+                <li><a href="signup.html">Login/Create Account</a></li>
+                <li><a href="#">Get Verification Mail</a></li>
+            </ul>
+        </div>
+        <div class="footer-section social links"><h2 style="padding-inline-start: 100px;">Keep Connected</h2>
+            <ul style="list-style-type: disc; list-style-position: inside; padding-inline-start: 100px; line-height: 35px;">
+                <li><a href="#" class="fa fa-facebook"> Like us on Facebbok</a></li>
+                <li><a href="#" class="fa fa-twitter"> Follow us on Twitter</a></li>
+                <li><a href="#" class="fa fa-instagram"> Follow us on Instagram</a></li>
+                <li><a href="#" class="fa fa-linkedin"> Follow us on Linkedin</a></li>
+                <li><a href="#" class="fa fa-youtube"> Follow us on YouTube</a></li>
+                </ul>
+        </div>
+        <div class="footer-section support"><h2 style="padding-inline-start: 150px;">Support</h2>
+        <p style="padding-inline-start: 150px; line-height: 35px; color: #bbbbbb;">If  you have any questions or you need our help,</p><p style="padding-inline-start: 150px; line-height: 0px; color: #bbbbbb;">you can contact us through our</p>
+        <p style="padding-inline-start: 150px; line-height: 40px;"><a href="#"><input type="button" value="SUPPORT SITE" style="background-color: #303036; border: 1; border-color: white; color: white; line-height: 25px;"></a></p>
+        </div>
+        <div class="footer-section quick link"><h2 style="padding-inline-start: 150px;">Quick links</h2>
+        <ul style="list-style-type: disc; list-style-position: inside; padding-inline-start: 150px; line-height: 35px;">
+           <li><a href="#">FAQ</a></li>
+        </ul>
+        </div>
+        </div>
+        <div id="footer-bottom">
+            Copyright © 2021 Quiz Hub All Rights Reserved &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="privacypolicy.html" target="_blank"><input type="button" value="Terms & Privacy" style="border: 0; color: #686868; background-color: #343A40;"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Powered by HVTech Solutions
+        </div>
+        </div>
+        <div class="arrow-btn">
+        <a href="#"><span class="fas fa-upload"></span></a>
+        </div>
+</body>
+</html>

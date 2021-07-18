@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TestPage 3 | Quiz Zone</title>
+    <link rel="icon" href="https://i.ibb.co/sb8N2bt/Quiz-Zone-Logo-Tile-192.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="button.css">
+    <link rel="stylesheet" href="arrbtn.css">
+    <script src="https://kit.fontawesome.com/15f8b2b9b3.js" crossorigin="anonymous"></script>
+    <style>
+        html{
+            scroll-behavior: smooth;
+        }
+
+        body{
+            margin: 0;
+            padding: 0;
+            background-color: #D8D8D8;
+        }
+
+        nav{
+            height: 80px;
+            box-shadow: 0 0 15px gray;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        nav .logo{
+            padding: 20px;
+        }
+
+        .rollno{
+            padding: 30px;
+            font-size: 20px;
+            font-weight: bold;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+
+        .timer{
+            padding: 30px;
+            font-size: 20px;
+            font-weight: bold;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+
+        .question1{
+            margin-left: 320px;
+            background-color: white;
+            width: 850px;
+            height: 530px;
+            padding-left: 20px;
+            padding-top: 2px;
+            border-radius: 20px;
+            
+        }
+
+        .question-heading{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .rationale-heading{
+            color: #CBCBCB;
+            padding-left: 5px;
+        }
+
+        .vertical{
+            border-left: 2px solid #CBCBCB;
+            height: 300px;
+            position: absolute;
+            left: 50%;
+        }
+
+        .q1,.q2,.q3,.q4{
+            display: flex;
+            padding-right: 100px;
+
+        }
+
+        .btn1{
+            background-color: white;
+            border: none;
+            color: black;
+            padding: 15px 28px;
+            text-align: center;
+            font-size: 16px;
+            margin-left: 350px;
+            margin-top: 30px;
+            border-radius: 10px;
+            font-weight: 600;
+        }
+
+        .btn2{
+            background-color: white;
+            border: none;
+            color: black;
+            padding: 15px 28px;
+            text-align: center;
+            font-size: 16px;
+            margin-left: 180px;
+            margin-top: 30px;
+            border-radius: 10px;
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        .btn3{
+            background-color: white;
+            border: none;
+            color: black;
+            padding: 15px 28px;
+            text-align: center;
+            font-size: 16px;
+            margin-left: 200px;
+            margin-top: 30px;
+            border-radius: 10px;
+            font-weight: 600;
+        }
+
+        #icon{
+            position: relative;
+            left: 1px;
+            top: 2px;
+            font-size: 20px;
+        }
+
+        .btn1:hover,.btn2:hover,.btn3:hover{
+            background-color: cyan;
+        }
+
+        .content{
+            display: flex;
+            flex-direction: row;
+        }
+
+        .content1{
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+            padding-right: 50px;
+        }
+
+        .rationale{
+            padding-right: 60px;
+            margin-top: 10px;
+        }
+
+        input[type=checkbox]{
+            zoom: 1.5;
+        }
+
+        .btn4{
+            background-color: orange;
+            border: none;
+            color: white;
+            padding: 15px 28px;
+            text-align: center;
+            font-size: 16px;
+            margin-left: 105px;
+            margin-top: 10px;
+            border-radius: 10px;
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        .btn4:hover{
+            background-color: lightgreen;
+        }
+
+        #text{
+            font-size: 25px;
+            color: green;
+        }
+
+        #countdown{
+            font-size: 20px;
+        }
+
+    </style>
+    <script>
+        function myfunction1(){
+          var z = confirm('Press OK To Submit The Test');
+          if(z == false){
+             return false;
+          }else if(z == true){
+              window.location.replace("TestEnd.html");
+          }
+        }
+     </script>
+</head>
+<body>
+    <nav>
+        <div class="logo"><a href="index.html"><img src="https://i.ibb.co/5cbTc9X/Quiz-Hub-Black.png" alt="Quiz-Zone-logo-black" border="0"></a></div>
+        <text id="text" style="font-weight: bold; margin-top: 30px; margin-left: 400px;">Time Left:</text><span id="countdown" style="font-weight: bold; margin-top: 34px; margin-right: 400px;"></span>  
+        
+        <script type="text/javascript" src="timer.js"></script>
+        <div class="rollno">
+            CB.EN.U4CSE20621 <i class="fas fa-user-circle"></i>
+        </div>
+    </nav><br>
+    <div class="question1">
+        <div class="question-heading">
+        <h1>Question 3</h1>
+    </div>
+        <div class="rationale-heading">
+            <h2><big> Rationale </big></h2>
+        </div>
+        <hr align="left" style="width: 35%;">
+        <div class="vertical"></div>
+        <div class="content">
+            <div class="content1">
+        <div class="q1">
+         <p> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab non impedit voluptatem fugit vel blanditiis vero quas facilis, itaque, corrupti in hic rerum suscipit quia neque totam porro. Totam, dolores. Quia dignissimos, eaque laborum similique, nihil itaque autem veritatis ut cupiditate eius expedita! Cum tenetur ad, dicta iste facilis saepe consequatur maiores eligendi eaque pariatur voluptatibus culpa sapiente amet exercitationem iusto beatae tempora ea, laboriosam, placeat est facere explicabo nostrum quae iure? Officia veritatis laudantium odio, quam nesciunt inventore incidunt ea error voluptatem. Deleniti modi sed dolorum, rerum quasi nobis quisquam! Ipsum reiciendis est odit amet optio laborum similique suscipit?
+        </p></div>
+    </p>
+</div>
+    <div class="rationale">
+    <text style="color: #CBCBCB;"> <big> <b style="font-size: 25px;"> Answer: </b> </big></text> 
+    <textarea name="" id="" cols="40" rows="15" style="resize: none;"></textarea>
+    <div class="save">
+    <button class="btn4"><a href="#" style="text-decoration: none; color: white;"> Save </a> </button>
+</div>
+    </div>
+</div>
+    </div>
+    <button class="btn1"><i class="fas fa-chevron-left" id="icon"> </i> <a href="TestPage-Match2.html" style="text-decoration: none; color: black;"> Previous </a></button>
+    <button class="btn2" onclick="myfunction1()"> Submit </button>
+    <button class="btn3"> <a href="TestPage-MCQ1.html" style="text-decoration: none; color: black;"> Next </a><i class="fas fa-chevron-right" id="icon"></i> </button> 
+    </div>
+    </body>
+</html>

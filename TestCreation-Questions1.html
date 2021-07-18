@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TestCreation-Questions | Quiz Zone</title>
+    <link rel="icon" href="https://i.ibb.co/sb8N2bt/Quiz-Zone-Logo-Tile-192.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="button.css">
+    <link rel="stylesheet" href="arrbtn.css">
+    <script src="https://kit.fontawesome.com/15f8b2b9b3.js" crossorigin="anonymous"></script>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #D8D8D8;
+        }
+
+        nav {
+            height: 80px;
+            box-shadow: 0 0 15px gray;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        nav .logo {
+            padding: 20px;
+        }
+
+        .rollno {
+            padding: 30px;
+            font-size: 20px;
+            font-weight: bold;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+
+        .create {
+            margin-left: 380px;
+            background-color: white;
+            width: 750px;
+            height: 530px;
+            padding-left: 20px;
+            padding-top: 2px;
+            border-radius: 20px;
+
+        }
+
+        #icon {
+            position: relative;
+            left: 1px;
+            top: 2px;
+            font-size: 20px;
+        }
+
+        .question {
+            padding: 30px;
+            padding-left: 30px;
+        }
+
+        select {
+            width: 120px;
+        }
+
+        .btn1 {
+            background-color: white;
+            border: none;
+            color: black;
+            padding: 15px 28px;
+            text-align: center;
+            font-size: 16px;
+            margin-left: 400px;
+            margin-top: 30px;
+            border-radius: 10px;
+            font-weight: 600;
+        }
+
+        .btn2 {
+            background-color: white;
+            border: none;
+            color: black;
+            padding: 15px 28px;
+            text-align: center;
+            font-size: 16px;
+            margin-left: 130px;
+            margin-top: 30px;
+            border-radius: 10px;
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        .btn3 {
+            background-color: white;
+            border: none;
+            color: black;
+            padding: 15px 28px;
+            text-align: center;
+            font-size: 16px;
+            margin-left: 150px;
+            margin-top: 30px;
+            border-radius: 10px;
+            font-weight: 600;
+        }
+
+        .btn2:hover,
+        .btn3:hover {
+            background-color: cyan;
+        }
+    </style>
+    <script>
+        function myfunction1() {
+            var z = confirm('Press OK To Create The Test');
+            if (z == false) {
+                return false;
+            } else if (z == true) {
+                window.location.replace("TestCreation-Confirmation.html");
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <nav>
+        <div class="logo"><a href="index.html"><img src="https://i.ibb.co/5cbTc9X/Quiz-Hub-Black.png"
+                    alt="Quiz-Zone-logo-black" border="0"></a></div>
+        <div class="rollno">
+            CB.EN.U4CSE20621 <i class="fas fa-user-circle"></i>
+        </div>
+    </nav><br>
+    <div class="create">
+        <form action="#">
+            <div class="content">
+                <div class="question">
+                    <h2 id="q1-h">Question 1</h2>
+                    <text
+                        style="font-size: 20px; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">Type</text>
+                    <select name="type" id="" required>
+                        <option value="Select">Select</option>
+                        <option value="MCQ">MCQ</option>
+                        <option value="Match">Match</option>
+                        <option value="Rationale">Rationale</option>
+                        <option value="Numerical">Numerical</option>
+                    </select>
+                    <text
+                        style="font-size: 20px; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; padding-left: 60px;">Marks</text>
+                    <textarea name="marks" id="" cols="10" rows="1" style="resize: none; margin-left: 5px;"></textarea>
+                    <text
+                        style="font-size: 20px; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; padding-left: 60px;">Negative</text>
+                    <textarea name="negative" id="" cols="10" rows="1"
+                        style="resize: none; margin-left: 5px;"></textarea>
+                    <br><br><br><br>
+                    <text
+                        style="font-size: 20px; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">Question</text>
+                    <textarea name="question" id="" cols="40" rows="1"
+                        style="resize: none; margin-left: 5px;"></textarea>
+                    <text
+                        style="font-size: 20px; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; padding-left: 55px;"><button
+                            id="addimg" onclick="alert('Still In Progress, will be done in future.')">Add
+                            Image</text>
+                    <i class="fas fa-plus" style="font-size: 20px;"></i></button> <br><br><br><br>
+                    <textarea name="choice1" id="choice1" cols="50" rows="1" style="resize: none; margin-left: 5px;"
+                        placeholder="Lorem ipsum dolor sit, amet consectetur dolor sit!"></textarea> <br><br>
+                    <text
+                        style="font-size: 20px; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; padding-left: 20px;"><button
+                            id="addopt" onclick="alert('Still In Progress, will be done in future.')">Add Choice</text>
+                    <i class="fas fa-plus" style="font-size: 20px;"></i></button> <br><br><br><br>
+                    <text
+                        style="font-size: 20px; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; padding-left: 5px;">Right
+                        Answer</text>
+                    <textarea name="correctans" id="" cols="15" rows="1"
+                        style="resize: none; margin-left: 5px;"></textarea>
+                </div>
+            </div>
+    </div>
+    <button class="btn1"><i class="fas fa-minus" id="icon"> </i> <a href="#"
+            style="text-decoration: none; color: black;"> Remove </a></button>
+    <input type="button" class="btn2" value="Create Test" onclick="myfunction1()">
+    <button class="btn3"> <a onclick="addtest()" style="text-decoration: none; color: black;"> Add
+        </a><i class="fas fa-plus" id="icon"></i> </button>
+    </form>
+    <script>
+        var i = 1;
+        var k = 1;
+        function addtest() {
+            k = i + 1;
+            i++;
+            let ele = document.getElementById("q1-h");
+            ele.innerHTML = "Question " + i;
+        }
+    </script>
+</body>
+
+</html>

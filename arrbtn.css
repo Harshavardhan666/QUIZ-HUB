@@ -1,0 +1,27 @@
+html{
+    scroll-behavior: smooth;
+}
+
+.arrow-btn{
+    position: fixed;
+    bottom: 410px;
+    right: 10px;
+}
+
+.arrow-btn a{
+    height: 42px;
+    width: 35px;
+    text-align: center;
+    background: #1b1b1b;
+    display: block;
+    line-height: 40px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    color: white;
+    
+}
+
+.arrow-btn a:hover{
+    padding-left: 10px;
+    color: orange;
+}

@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TestPage 1 | Quiz Zone</title>
+    <link rel="icon" href="https://i.ibb.co/sb8N2bt/Quiz-Zone-Logo-Tile-192.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="button.css">
+    <link rel="stylesheet" href="arrbtn.css">
+    <script src="https://kit.fontawesome.com/15f8b2b9b3.js" crossorigin="anonymous"></script>
+    <style>
+        html{
+            scroll-behavior: smooth;
+        }
+
+        body{
+            margin: 0;
+            padding: 0;
+            background-color: #D8D8D8;
+        }
+
+        nav{
+            height: 80px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            box-shadow: 0 0 15px gray;
+        }
+
+        nav .logo{
+            padding: 20px;
+        }
+
+        .rollno{
+            padding: 30px;
+            font-size: 20px;
+            font-weight: bold;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+
+        .timer{
+            padding: 30px;
+            font-size: 20px;
+            font-weight: bold;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+
+        .question1{
+            margin-left: 320px;
+            background-color: white;
+            width: 850px;
+            height: 530px;
+            padding-left: 20px;
+            padding-top: 2px;
+            border-radius: 20px;
+            
+        }
+
+        .question-heading{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .match{
+            color: #CBCBCB;
+            padding-left: 5px;
+        }
+
+        .vertical{
+            border-left: 2px solid #CBCBCB;
+            height: 300px;
+            position: absolute;
+            left: 50%;
+        }
+
+        .q1,.q2,.q3,.q4{
+            display: flex;
+            padding-right: 100px;
+
+        }
+
+        .btn1{
+            background-color: white;
+            border: none;
+            color: black;
+            padding: 15px 28px;
+            text-align: center;
+            font-size: 16px;
+            margin-left: 350px;
+            margin-top: 30px;
+            border-radius: 10px;
+            font-weight: 600;
+        }
+
+        .btn2{
+            background-color: white;
+            border: none;
+            color: black;
+            padding: 15px 28px;
+            text-align: center;
+            font-size: 16px;
+            margin-left: 180px;
+            margin-top: 30px;
+            border-radius: 10px;
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        .btn3{
+            background-color: white;
+            border: none;
+            color: black;
+            padding: 15px 28px;
+            text-align: center;
+            font-size: 16px;
+            margin-left: 200px;
+            margin-top: 30px;
+            border-radius: 10px;
+            font-weight: 600;
+        }
+
+        #icon{
+            position: relative;
+            left: 1px;
+            top: 2px;
+            font-size: 20px;
+        }
+
+        .btn2:hover,.btn3:hover{
+            background-color: cyan;
+        }
+
+        .content{
+            display: flex;
+            flex-direction: row;
+            
+        }
+
+        .content1{
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+            padding-right: 50px;
+        
+            
+        }
+
+        .options{
+            padding-right: 150px;
+            padding-left: 0px;
+        }
+
+        input[type=checkbox]{
+            zoom: 1.5;
+        }
+
+        #text{
+            font-size: 25px;
+            color: green;
+        }
+
+        #countdown{
+            font-size: 20px;
+        }
+
+    </style>
+    <script>
+        function myfunction1(){
+          var z = confirm('Press OK To Submit The Test');
+          if(z == false){
+              return false;
+          }else if(z == true){
+              window.location.replace("TestEnd.html");
+          }
+        }
+     </script>
+</head>
+<body>
+    <nav>
+        <div class="logo"><a href="index.html"><img src="https://i.ibb.co/5cbTc9X/Quiz-Hub-Black.png" alt="Quiz-Zone-logo-black" border="0"></a></div>
+       <text id="text" style="font-weight: bold; margin-top: 30px; margin-left: 400px;">Time Left:</text><span id="countdown" style="font-weight: bold; margin-top: 34px; margin-right: 400px;"></span>  
+        
+        <script type="text/javascript" src="timer.js"></script>
+        <div class="rollno">
+            CB.EN.U4CSE20621 <i class="fas fa-user-circle"></i>
+        </div>
+    </nav><br>
+    <div class="question1">
+        <div class="question-heading">
+        <h1 id="q1-h">Question 1</h1>
+    </div>
+        <div class="match">
+            <h2><big> Match </big></h2>
+        </div>
+        <hr align="left" style="width: 35%;">
+        <div class="vertical"></div>
+        <div class="content">
+            <div class="content1">
+        <div class="q1">
+         <pre><big>1) </big></pre> <p> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet voluptas quis molestias! Ex corrupti obcaecati velit harum dolores incidunt.
+        </p></div>
+       <div class="q2">
+        <pre><big>2) </big></pre> <p> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet voluptas quis molestias! Ex corrupti obcaecati velit harum dolores incidunt.
+        </div>
+        <div class="q3">
+        <pre><big>3) </big></pre> <p> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet voluptas quis molestias! Ex corrupti obcaecati velit harum dolores incidunt.
+         </div>
+         <div class="q4">
+         <pre><big>4) </big></pre> <p> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet voluptas quis molestias! Ex corrupti obcaecati velit harum dolores incidunt.
+        </div>
+    </p>
+</div>
+    <div class="options">
+      <label for="o1"><input type="checkbox" name="" id="o1"> Lorem ipsum dolor sit amet consectetur, adipisicing elit.</label> <br><br>
+      <label for="o2"><input type="checkbox" name="" id="o2"> Lorem ipsum dolor sit amet consectetur, adipisicing elit.</label> <br><br>
+      <label for="o3"><input type="checkbox" name="" id="o3"> Lorem ipsum dolor sit amet consectetur, adipisicing elit.</label> <br><br>
+      <label for="o4"><input type="checkbox" name="" id="o4"> Lorem ipsum dolor sit amet consectetur, adipisicing elit.</label> <br><br>
+    </div>
+</div>
+    </div>
+    <button class="btn1" disabled><i class="fas fa-chevron-left" id="icon"> </i> <a onclick="previousquestion()" style="text-decoration: none; color: black;"> Previous </a></button>
+    <button class="btn2" onclick="myfunction1()"> Submit </button>
+    <button class="btn3"> <a onclick="nextquestion()" style="text-decoration: none; color: black;"> Next </a><i class="fas fa-chevron-right" id="icon"></i> </button> 
+    </div>
+    <script>
+       var i=1;
+       var k=1;
+        function nextquestion(){
+            k=i+1;
+            console.log(k);
+            i++;
+            let ele = document.getElementById("q1-h");
+                ele.innerHTML = "Question " + i;
+            if(i==6)
+            {
+                alert("Questions Completed");
+            }  
+        }
+        
+        function previousquestion(){
+            let ele = document.getElementById("q2-h");
+            ele.innerHTML = "Question 1";
+        }
+    </script>
+    </body>
+</html>

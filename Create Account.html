@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup | Quiz Zone</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #D8D8D8;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        table {
+            color: black;
+            background-color: #d8e3e7;
+            border-radius: 5px;
+        }
+
+        a {
+            transition: all 0.3s ease;
+        }
+
+        a:hover {
+            padding-left: 5px;
+        }
+
+        nav .logo {
+            padding: 30px;
+            font-size: 30px;
+            color: white;
+        }
+
+        nav {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            background-color: #303036;
+            width: 100%;
+            height: 70px;
+            align-items: center;
+            box-shadow: 0 0 15px gray;
+        }
+
+        nav ul {
+            color: white;
+            text-decoration: none;
+            padding-right: 6px;
+            padding-bottom: 40px;
+        }
+
+        nav li:hover {
+            color: cyan;
+        }
+
+        nav ul li {
+            color: white;
+            list-style: none;
+            padding-top: 45px;
+            padding-right: 30px;
+            float: left;
+            position: relative;
+        }
+
+        nav ul li:hover {
+            box-shadow: 0px 0.5px cyan;
+        }
+
+        #footer a,
+        .arrow-btn a {
+            transition: all 0.3s ease;
+            padding: 8px;
+            text-decoration: none;
+        }
+
+        #footer a:hover {
+            color: cyan;
+            padding-left: 15px;
+        }
+
+        #footer {
+            background: #303036;
+            color: #d3d3d3;
+            height: 400px;
+            width: 100%;
+            position: relative;
+            box-shadow: 0 0 15px gray;
+        }
+
+        #footer-content {
+            height: 350px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: left;
+        }
+
+        #footer-content ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 300;
+            color: #bbbbbb;
+            transition: all 0.3s ease;
+        }
+
+        #footer-content ul li a:hover {
+            padding-left: 15px;
+        }
+
+        #footer-bottom {
+            background: #343A40;
+            color: #686868;
+            height: 40px;
+            width: 100%;
+            text-align: center;
+            position: absolute;
+            bottom: 0px;
+            left: 0px;
+            padding-top: 15px;
+        }
+
+        #img {
+            margin-top: 30px;
+            margin-left: 130px;
+            width: 300px;
+            height: 310px;
+            border: 0;
+        }
+
+        .main {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        form {
+            margin-right: 400px;
+            width: 500px;
+        }
+
+        input:focus {
+            outline: none;
+        }
+    </style>
+    <link rel="icon" href="https://i.ibb.co/sb8N2bt/Quiz-Zone-Logo-Tile-192.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="button.css">
+    <link rel="stylesheet" href="arrbtn.css">
+    <script src="https://kit.fontawesome.com/15f8b2b9b3.js" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        function validateform1() {
+            let name = document.getElementById("name").value;
+            for (i = 0; i < name.length; i++) {
+                ch = name.charAt(i);
+                if (!(ch >= 'a' && ch <= 'z') && !(ch >= 'A' && ch <= 'z') && !(ch == '')) {
+                    let ele = document.getElementById("name");
+                    ele.style.borderColor = "red";
+                    ele.style.color = "red";
+                    alert("Invalid Name, Only Alphabets Are Allowed.");
+                    return false;
+                } else {
+                    let ele = document.getElementById("name");
+                    ele.style.borderColor = "black"
+                    ele.style.color = "black";
+                }
+            }
+            var num = document.signup.number.value;
+            if (isNaN(num)) {
+                // document.getElementById("number").innerHTML="Enter Numeric Value Only"; 
+                let ele1 = document.getElementById("number");
+                ele1.style.borderColor = "red";
+                ele1.style.color = "red";
+                alert("Enter Numeric Value Only For Mobile Number.");
+                return false;
+            } else if (num.length != 10) {
+                let ele1 = document.getElementById("number");
+                ele1.style.borderColor = "red";
+                ele1.style.color = "red";
+                alert("Please Enter Valid Mobile Number.");
+                return false;
+            } else if (num > 0) {
+                let numb = document.getElementById("number").value;
+                console.log(numb);
+                let char = Math.floor(numb / (10 ** (numb.length - 1)));
+                console.log(char);
+                if ((char == 6) || (char == 7) || (char == 8) || (char == 9)) {
+                } else {
+                    alert("Please Enter Valid Mobile Number.");
+                    return false;
+                }
+
+            } else {
+                let ele1 = document.getElementById("number");
+                ele1.style.borderColor = "black";
+                ele1.style.color = "black";
+            }
+            var id = document.signup.id.value;
+            for (j = 0; j < id.length; j++) {
+                c = id.charAt(j);
+                if (!(c >= 'a' && c <= 'z') && !(c >= 'A' && c <= 'z') && !(c == '') && !(c == '.') && !(c >= '1' && c <= '9')) {
+                    let ele2 = document.getElementById("id");
+                    ele2.style.borderColor = "red";
+                    ele2.style.color = "red";
+                    alert("Login Id Should Contain Only Alphabets, Numbers, And Dot.");
+                    return false;
+                } else {
+                    let ele2 = document.getElementById("id");
+                    ele2.style.borderColor = "black";
+                    ele2.style.color = "black";
+                }
+            }
+            var pass1 = document.signup.pass1.value;
+            var pass2 = document.signup.pass2.value;
+            for (k = 0; k < pass1.length; k++) {
+                x = pass1.charAt(k);
+                if (!(x >= 'a' && x <= 'z') && !(x >= 'A' && x <= 'z') && !(x == '') && !(x >= '1' && x <= '9')) {
+                    let ele3 = document.getElementById("pass1");
+                    ele3.style.borderColor = "red";
+                    ele3.style.color = "red";
+                    alert("Password Must Contain Only Alphabets And Digits.");
+                    return false;
+                } else {
+                    let ele3 = document.getElementById("pass1");
+                    ele3.style.borderColor = "black";
+                    ele3.style.color = "black";
+                }
+            }
+            if (!(pass1.length >= 6)) {
+                let ele3 = document.getElementById("pass1");
+                ele3.style.borderColor = "red";
+                ele3.style.color = "red";
+                alert("Password Must Be At Least 6 Characters Long.");
+                return false;
+            } else if (!(pass1 == pass2)) {
+                let ele3 = document.getElementById("pass2");
+                ele3.style.borderColor = "red";
+                ele3.style.color = "red";
+                alert("Password Must Be Same.");
+                return false;
+            } else {
+                let ele3 = document.getElementById("pass1");
+                ele3.style.borderColor = "black";
+                ele3.style.color = "black";
+                let ele4 = document.getElementById("pass2");
+                ele4.style.borderColor = "black";
+                ele4.style.color = "black";
+            }
+            return true;
+        }
+    </script>
+</head>
+
+<body link="blue" vlink="red" alink="green">
+    <nav>
+        <div class="logo"><a href="index.html"><img src="https://i.ibb.co/c81F882/Quiz-Hub-White.png"
+                    alt="Quiz-Zone-logo-white" border="0"></a></div>
+        <ul>
+            <a href="index.html">
+                <li>Home</li>
+            </a>
+            <a href="signin.html">
+                <li>Sign In</li>
+            </a>
+            <a href="#">
+                <li>Online Tests</li>
+            </a>
+            <a href="studenttests.html">
+                <li>Test Details</li>
+            </a>
+            <a href="About Us.html" target="_blank">
+                <li>About Us</li>
+            </a>
+            <a href="Contact Us.html" target="_blank">
+                <li>Contact Us</li>
+            </a>
+            <a href="#footer">
+                <li>Help & Support</li>
+            </a>
+        </ul>
+    </nav><br><br>
+    <div class="main"><iframe id="img" src="https://lottiefiles.com/iframe/23640-sign-in-or-sign-up-animation"></iframe>
+        <form onsubmit="return validateform1()" action="Create Account1.html" id="signup" name="signup" target="_blank"
+            method="POST">
+            <table height="100px" width="160%" cellpadding="25">
+                <tr>
+                    <th colspan="2" bgcolor="skyblue">
+                        <h3><big>Create a Free account</big></h3>
+                    </th>
+                </tr>
+                <tr>
+                    <td align="center" colspan="2">You Can Create Your Account By Filling Out The Form!</td>
+                </tr>
+                <tr>
+                    <th><big>Name:</big></th>
+                    <th><input type="text" placeholder="Name" id="name" name="name" autofocus required size="25"></th>
+                </tr>
+                <tr>
+                    <th><big>Email:</big></th>
+                    <th><input type="email" placeholder="Email Address" required size="25"></th>
+                </tr>
+                <tr>
+                    <th><big>Mobile Number:</big></th>
+                    <th><input type="text" placeholder="Mobile Number" id="number" name="number" required size="25">
+                    </th>
+                </tr>
+                <tr>
+                    <th><big>Login Id:</big></th>
+                    <th><input type="text" placeholder="Login Id" id="id" name="id" required size="25"></th>
+                </tr>
+                <tr>
+                    <th><big>Password:</big></th>
+                    <th><input type="password" placeholder="Password" id="pass1" name="pass1" required size="25"></th>
+                </tr>
+                <tr>
+                    <th><big>Re-Enter Password:</big></th>
+                    <th><input type="password" placeholder="Confirm Password" id="pass2" name="pass2" required
+                            size="25"></th>
+                </tr>
+                <tr>
+                    <th colspan="2">
+                        <p align="left">Already have an account?<a href="signin.html"><input type="button"
+                                    value="Sign In" style="border: 0; background-color: #d8e3e7; color: blue;"></a></p>
+                        <input type="submit" id="button" value="Create My Account">&nbsp;&nbsp;&nbsp;<input type="reset"
+                            id="reset">
+                    </th>
+                </tr>
+            </table>
+            <p align=right> By Creating an Account, You Agree To Accept<a href="privacypolicy.html" target="_blank">
+                    <font face="arial" color="blue" size="2"><input type="button" value="Our Terms"
+                            style="border: 0; color: blue; background-color: #D8D8D8;"></font>
+                </a>Of<a href="privacypolicy.html" target="_blank">
+                    <font face="arial" color="blue" size="2"><input type="button" value="Service."
+                            style="border: 0; color: blue; background-color: #D8D8D8;"></font>
+                </a></p><br>
+        </form>
+    </div>
+    <br><br>
+    <div id="footer">
+        <div id="footer-content">
+            <div class="footer-section about">
+                <h2 style="padding-inline-start: 100px;">Our Services</h2>
+                <ul
+                    style="list-style-type: disc; list-style-position: inside; padding-inline-start: 100px; line-height: 35px;">
+                    <li><a href="#">Exclusive Test</a></li>
+                    <li><a href="#">Test Categories</a></li>
+                    <li><a href="#">Private Tests</a></li>
+                    <li><a href="#">Group Tests</a></li>
+                    <li><a href="Contact Us.html" target="_blank">Contact Us</a></li>
+                    <li><a href="privacypolicy.html" target="_blank">Terms & Conditions</a></li>
+                    <li><a href="signup.html">Login/Create Account</a></li>
+                    <li><a href="#">Get Verification Mail</a></li>
+                </ul>
+            </div>
+            <div class="footer-section social links">
+                <h2 style="padding-inline-start: 100px;">Keep Connected</h2>
+                <ul
+                    style="list-style-type: disc; list-style-position: inside; padding-inline-start: 100px; line-height: 35px;">
+                    <li><a href="#" class="fa fa-facebook"> Like us on Facebbok</a></li>
+                    <li><a href="#" class="fa fa-twitter"> Follow us on Twitter</a></li>
+                    <li><a href="#" class="fa fa-instagram"> Follow us on Instagram</a></li>
+                    <li><a href="#" class="fa fa-linkedin"> Follow us on Linkedin</a></li>
+                    <li><a href="#" class="fa fa-youtube"> Follow us on YouTube</a></li>
+                </ul>
+            </div>
+            <div class="footer-section support">
+                <h2 style="padding-inline-start: 150px;">Support</h2>
+                <p style="padding-inline-start: 150px; line-height: 35px; color: #bbbbbb;">If you have any questions or
+                    you need our help,</p>
+                <p style="padding-inline-start: 150px; line-height: 0px; color: #bbbbbb;">you can contact us through our
+                </p>
+                <p style="padding-inline-start: 150px; line-height: 40px;"><a href="#"><input type="button"
+                            value="SUPPORT SITE"
+                            style="background-color: #303036; border: 1; border-color: white; color: white; line-height: 25px;"></a>
+                </p>
+            </div>
+            <div class="footer-section quick link">
+                <h2 style="padding-inline-start: 150px;">Quick links</h2>
+                <ul
+                    style="list-style-type: disc; list-style-position: inside; padding-inline-start: 150px; line-height: 35px;">
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="footer-bottom">
+            Copyright © 2021 Quiz Hub All Rights Reserved &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="privacypolicy.html"
+                target="_blank"><input type="button" value="Terms & Privacy"
+                    style="border: 0; color: #686868; background-color: #343A40;"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Powered
+            by HVTech Solutions
+        </div>
+    </div>
+    <div class="arrow-btn">
+        <a href="#"><span class="fas fa-upload"></span></a>
+    </div>
+</body>
+
+</html>

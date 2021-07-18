@@ -1,0 +1,418 @@
+<html>
+
+<head>
+
+    <title>DM Test </title>
+    <style>
+        hr {
+            width: 300px;
+            float: left;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .questions {
+            margin-left: 300px;
+            margin-right: 300px;
+            font-size: 20px;
+        }
+
+        .heading {
+            align-items: center;
+            background-color: #00A7F4;
+            padding: 0 px;
+            margin-left: 630px;
+            margin-right: 700px;
+            text-align: center;
+            color: white;
+            width: 200px;
+            text-transform: uppercase;
+            font-weight: 900;
+        }
+
+        .points {
+            margin-left: 600px;
+            padding: 5px;
+            padding-left: 1px;
+            padding-right: 1px;
+            background-color: cyan;
+        }
+
+        .timer {
+            margin: 20px;
+            font-size: 20px;
+            position: fixed;
+            font-weight: bold;
+        }
+
+        #text-timer {
+            color: green;
+        }
+    </style>
+    <link rel="icon" href="https://i.ibb.co/sb8N2bt/Quiz-Zone-Logo-Tile-192.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="button.css">
+    <link rel="stylesheet" href="arrbtn.css">
+    <script src="https://kit.fontawesome.com/15f8b2b9b3.js" crossorigin="anonymous"></script>
+    <script>
+        function myfunction1() {
+            var y = confirm('Press OK To End The Test');
+            if (y == true) {
+                window.location.replace("studenttests.html");
+            } else {
+                return false;
+            }
+        }
+
+        function myfunction2() {
+            var z = confirm('Press OK To Submit The Test');
+            if (z == false) {
+                return false;
+            } else if (z == true) {
+                window.location.replace("TestEnd.html")
+            }
+        }
+    </script>
+</head>
+
+<body bgcolor="white"><br>
+    <div class="timer">
+        <text id="text-timer"> Time Left: </text><span id="countdown"></span>
+    </div>
+    <script type="text/javascript" src="timer.js"></script>
+    <div class="heading">
+        <center>
+            <h1>DM Quiz</h1>
+        </center>
+    </div>
+    <br><br>
+    <div class="questions">
+        <p>
+
+        <p>
+
+            <b> <big> Q1) </big><span class="points">2 Points</span>
+                <br>
+                <br>A __________ is an ordered collection of objects. <br></b>
+
+        <blockquote>
+
+            <label for="o1(1)"><input type="radio" name="q1" id="o1(1)" value="Relation"> <img
+                    src="https://i.ibb.co/zfsbr8N/a.png" alt="a" border="0" style="width: 15px; height: 15px;"> Relation
+            </label><br>
+
+            <label for="o2(1)"><input type="radio" name="q1" id="o2(1)" value="Function"> <img
+                    src="https://i.ibb.co/cFRFVBc/b.png" alt="b" border="0" style="width: 15px; height: 15px;"> Function
+            </label><br>
+
+            <label for="o3(1)"><input type="radio" name="q1" id="o3(1)" value="Set"> <img
+                    src="https://i.ibb.co/D72JHYw/c.png" alt="c" border="0" style="width: 15px; height: 15px;"> Set
+            </label><br>
+
+            <label for="o4(1)"><input type="radio" name="q1" id="o4(1)" value="Proposition"> <img
+                    src="https://i.ibb.co/mSNbqMX/d.png" alt="d" border="0" style="width: 15px; height: 15px;">
+                Proposition </label><br>
+
+        </blockquote>
+
+        <p>
+
+            <hr><br>
+            <b>
+                <big> Q2) </big> <span class="points">2 Points</span>
+                <br>
+                <br>The set O of odd positive integers less than 10 can be expressed by _____________ <br></b>
+
+        <blockquote>
+
+            <label for="o1(2)"><input type="radio" name="q2" id="o1(2)" value="{1, 2, 3}"> <img
+                    src="https://i.ibb.co/zfsbr8N/a.png" alt="a" border="0" style="width: 15px; height: 15px;"> {1, 2,
+                3} </label><br>
+
+            <label for="o2(2)"><input type="radio" name="q2" id="o2(2)" value="{1, 3, 5, 7, 9}"> <img
+                    src="https://i.ibb.co/cFRFVBc/b.png" alt="b" border="0" style="width: 15px; height: 15px;"> {1, 3,
+                5, 7, 9} </label><br>
+
+            <label for="o3(2)"><input type="radio" name="q2" id="o3(2)" value="{1, 2, 5, 9}"> <img
+                    src="https://i.ibb.co/D72JHYw/c.png" alt="c" border="0" style="width: 15px; height: 15px;"> {1, 2,
+                5, 9} </label><br>
+
+            <label for="o4(2)"><input type="radio" name="q2" id="o4(2)" value="{1, 5, 7, 9, 11}"> <img
+                    src="https://i.ibb.co/mSNbqMX/d.png" alt="d" border="0" style="width: 15px; height: 15px;"> {1, 5,
+                7, 9, 11} </label><br>
+
+        </blockquote>
+
+        <p><b>
+
+                <hr><br>
+
+                <big> Q3) </big> <span class="points">2 Points</span>
+                <br>
+                <br>Power set of empty set has exactly _________ subset. <br>
+            </b>
+
+        <blockquote>
+
+            <label for="o1(3)"><input type="radio" name="q3" id="o1(3)" value="One"> <img
+                    src="https://i.ibb.co/zfsbr8N/a.png" alt="a" border="0" style="width: 15px; height: 15px;"> One
+            </label><br>
+
+            <label for="o2(3)"><input type="radio" name="q3" id="o2(3)" value="Two"> <img
+                    src="https://i.ibb.co/cFRFVBc/b.png" alt="b" border="0" style="width: 15px; height: 15px;"> Two
+            </label><br>
+
+            <label for="o3(3)"><input type="radio" name="q3" id="o3(3)" value="Zero"> <img
+                    src="https://i.ibb.co/D72JHYw/c.png" alt="c" border="0" style="width: 15px; height: 15px;"> Zero
+            </label><br>
+
+            <label for="o4(3)"><input type="radio" name="q3" id="o4(3)" value="Three"> <img
+                    src="https://i.ibb.co/mSNbqMX/d.png" alt="d" border="0" style="width: 15px; height: 15px;"> Three
+            </label><br>
+
+        </blockquote>
+
+        <p><b>
+
+                <hr><br>
+
+                <big> Q4) </big> <span class="points">2 Points</span>
+                <br>
+                <br>What is the Cartesian product of A = {1, 2} and B = {a, b}? <br>
+            </b>
+
+        <blockquote>
+
+            <label for="o1(4)"><input type="radio" name="q4" id="o1(4)" value="{(1, a), (1, b), (2, a), (b, b)}"> <img
+                    src="https://i.ibb.co/zfsbr8N/a.png" alt="a" border="0" style="width: 15px; height: 15px;"> {(1, a),
+                (1, b), (2, a), (b, b)} </label><br>
+
+            <label for="o2(4)"><input type="radio" name="q4" id="o2(4)" value="{(1, 1), (2, 2), (a, a), (b, b)}"> <img
+                    src="https://i.ibb.co/cFRFVBc/b.png" alt="b" border="0" style="width: 15px; height: 15px;"> {(1, 1),
+                (2, 2), (a, a), (b, b)} </label><br>
+
+            <label for="o3(4)"><input type="radio" name="q4" id="o3(4)" value="{(1, a), (2, a), (1, b), (2, b)}"> <img
+                    src="https://i.ibb.co/D72JHYw/c.png" alt="c" border="0" style="width: 15px; height: 15px;"> {(1, a),
+                (2, a), (1, b), (2, b)} </label><br>
+
+            <label for="o4(4)"><input type="radio" name="q4" id="o4(4)" value="{(1, 1), (a, a), (2, a), (1, b)}"> <img
+                    src="https://i.ibb.co/mSNbqMX/d.png" alt="d" border="0" style="width: 15px; height: 15px;"> {(1, 1),
+                (a, a), (2, a), (1, b)} </label><br>
+
+        </blockquote>
+
+        <p><b>
+
+                <hr><br>
+
+                <big> Q5) </big> <span class="points">2 Points</span>
+                <br>
+                <br>What is the cardinality of the set of odd positive integers less than 10? <br>
+            </b>
+
+        <blockquote>
+
+            <label for="o1(5)"><input type="radio" name="q5" id="o1(5)" value="10"> <img
+                    src="https://i.ibb.co/zfsbr8N/a.png" alt="a" border="0" style="width: 15px; height: 15px;"> 10
+            </label><br>
+
+            <label for="o2(5)"><input type="radio" name="q5" id="o2(5)" value="5"> <img
+                    src="https://i.ibb.co/cFRFVBc/b.png" alt="b" border="0" style="width: 15px; height: 15px;"> 5
+            </label><br>
+
+            <label for="o3(5)"><input type="radio" name="q5" id="o3(5)" value="3"> <img
+                    src="https://i.ibb.co/D72JHYw/c.png" alt="c" border="0" style="width: 15px; height: 15px;"> 3
+            </label><br>
+
+            <label for="o4(5)"><input type="radio" name="q5" id="o4(5)" value="20"> <img
+                    src="https://i.ibb.co/mSNbqMX/d.png" alt="d" border="0" style="width: 15px; height: 15px;"> 20
+            </label><br>
+
+        </blockquote>
+
+        <p><b>
+
+                <hr><br>
+
+                <big> Q6) </big> <span class="points">2 Points</span>
+                <br>
+                <br>The set of positive integers is _____________ <br>
+            </b>
+
+        <blockquote>
+
+            <label for="o1(6)"><input type="radio" name="q6" id="o1(6)" value="Infinite"> <img
+                    src="https://i.ibb.co/zfsbr8N/a.png" alt="a" border="0" style="width: 15px; height: 15px;"> Infinite
+            </label><br>
+
+            <label for="o2(6)"><input type="radio" name="q6" id="o2(6)" value="Finite"> <img
+                    src="https://i.ibb.co/cFRFVBc/b.png" alt="b" border="0" style="width: 15px; height: 15px;"> Finite
+            </label><br>
+
+            <label for="o3(6)"><input type="radio" name="q6" id="o3(6)" value="Subset"> <img
+                    src="https://i.ibb.co/D72JHYw/c.png" alt="c" border="0" style="width: 15px; height: 15px;"> Subset
+            </label><br>
+
+            <label for="o4(6)"><input type="radio" name="q6" id="o4(6)" value="Empty"> <img
+                    src="https://i.ibb.co/mSNbqMX/d.png" alt="d" border="0" style="width: 15px; height: 15px;"> Empty
+            </label><br>
+
+        </blockquote>
+
+        <p><b>
+
+                <hr><br>
+
+                <big> Q7) </big> <span class="points">2 Points</span>
+                <br>
+                <br>What is the Cardinality of the Power set of the set {0, 1, 2}?
+                <br>
+            </b>
+
+        <blockquote>
+
+            <label for="o1(7)"><input type="radio" name="q7" id="o1(7)" value="8"> <img
+                    src="https://i.ibb.co/zfsbr8N/a.png" alt="a" border="0" style="width: 15px; height: 15px;"> 8
+            </label><br>
+
+            <label for="o2(7)"><input type="radio" name="q7" id="o2(7)" value="6"> <img
+                    src="https://i.ibb.co/cFRFVBc/b.png" alt="b" border="0" style="width: 15px; height: 15px;"> 6
+            </label><br>
+
+            <label for="o3(7)"><input type="radio" name="q7" id="o3(7)" value="7
+"> <img src="https://i.ibb.co/D72JHYw/c.png" alt="c" border="0" style="width: 15px; height: 15px;"> 7 </label>
+            <br>
+
+            <label for="o4(7)"><input type="radio" name="q7" id="o4(7)" value="9"> <img
+                    src="https://i.ibb.co/mSNbqMX/d.png" alt="d" border="0" style="width: 15px; height: 15px;"> 9
+            </label><br>
+
+        </blockquote>
+
+        <p><b>
+
+                <hr><br>
+
+                <big> Q8) </big> <span class="points">2 Points</span>
+                <br>
+                <br>Power set of empty or Null set has exactly _________ subset. <br>
+            </b>
+
+        <blockquote>
+
+            <label for="o1(8)"><input type="radio" name="q8" id="o1(8)" value="One
+"> <img src="https://i.ibb.co/zfsbr8N/a.png" alt="a" border="0" style="width: 15px; height: 15px;"> One </label>
+            <br>
+
+            <label for="o2(8)"><input type="radio" name="q8" id="o2(8)" value="Two"> <img
+                    src="https://i.ibb.co/cFRFVBc/b.png" alt="b" border="0" style="width: 15px; height: 15px;"> Two
+            </label><br>
+
+            <label for="o3(8)"><input type="radio" name="q8" id="o3(8)" value="Zero"> <img
+                    src="https://i.ibb.co/D72JHYw/c.png" alt="c" border="0" style="width: 15px; height: 15px;"> Zero
+            </label><br>
+
+            <label for="o4(8)"><input type="radio" name="q8" id="o4(8)" value="Three"> <img
+                    src="https://i.ibb.co/mSNbqMX/d.png" alt="d" border="0" style="width: 15px; height: 15px;"> Three
+            </label><br>
+
+        </blockquote>
+
+        <p><b>
+
+                <hr><br>
+
+                <big> Q9) </big> <span class="points">2 Points</span>
+                <br>
+                <br>The difference of {1, 2, 3, 6, 8} and {1, 2, 5, 6} is the set ____________
+                <br>
+            </b>
+
+        <blockquote>
+
+            <label for="o1(9)"><input type="radio" name="q9" id="o1(9)" value="{1,3}
+"> <img src="https://i.ibb.co/zfsbr8N/a.png" alt="a" border="0" style="width: 15px; height: 15px;"> {1,3} </label>
+            <br>
+
+            <label for="o2(9)"><input type="radio" name="q9" id="o2(9)" value="{5,6,8}
+"> <img src="https://i.ibb.co/cFRFVBc/b.png" alt="b" border="0" style="width: 15px; height: 15px;"> {5,6,8} </label>
+            <br>
+
+            <label for="o3(9)"><input type="radio" name="q9" id="o3(9)" value="{3,8}
+"> <img src="https://i.ibb.co/D72JHYw/c.png" alt="c" border="0" style="width: 15px; height: 15px;"> {3,8} </label>
+            <br>
+
+            <label for="o4(9)"><input type="radio" name="q9" id="o4(9)" value="{2,6,5}"> <img
+                    src="https://i.ibb.co/mSNbqMX/d.png" alt="d" border="0" style="width: 15px; height: 15px;"> {2,6,5}
+            </label><br>
+
+        </blockquote>
+
+        <p><b>
+
+                <hr><br>
+
+                <big> Q10) </big> <span class="points">2 Points</span>
+                <br>
+                <br>The cardinality of the Power set of the set {1, 5, 6} is______________.
+                <br>
+            </b>
+
+        <blockquote>
+
+            <label for="o1(10)"><input type="radio" name="q10" id="o1(10)" value="5
+"> <img src="https://i.ibb.co/zfsbr8N/a.png" alt="a" border="0" style="width: 15px; height: 15px;"> 5 </label>
+            <br>
+
+            <label for="o2(10)"><input type="radio" name="q10" id="o2(10)" value="6"> <img
+                    src="https://i.ibb.co/cFRFVBc/b.png" alt="b" border="0" style="width: 15px; height: 15px;"> 6
+            </label><br>
+
+            <label for="o3(10)"><input type="radio" name="q10" id="o3(10)" value="8"> <img
+                    src="https://i.ibb.co/D72JHYw/c.png" alt="c" border="0" style="width: 15px; height: 15px;"> 8
+            </label><br>
+
+            <label for="o4(10)"><input type="radio" name="q10" id="o4(10)" value="10"> <img
+                    src="https://i.ibb.co/mSNbqMX/d.png" alt="d" border="0" style="width: 15px; height: 15px;"> 10
+            </label><br>
+
+        </blockquote>
+
+        <p><b>
+
+                <hr><br>
+    </div>
+
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <input type="submit" id="button" value="Submit Test" onclick="myfunction2()">
+    &nbsp;&nbsp;&nbsp;
+    <input type="button" id="button" value="End Test" onclick="myfunction1()">
+    <p>
+
+    <p>
+
+    <div class="arrow-btn">
+        <a href="#" class="fas fa-upload"></a>
+    </div>
+    <script type="text/javascript">
+        function generatepoints(){
+            let ele = document.getElementsByClassName("points");
+            for(var i=0;i<ele.length;i++)
+            {
+                let random = Math.floor(Math.random()*(3-1+1))+1;
+                if(random==1){
+                    ele[i].innerHTML = random + " Point";
+                }else{
+                    ele[i].innerHTML = random + " Points";
+                }
+            }
+        }
+        generatepoints();
+    </script>
+</body>
+
+</html>

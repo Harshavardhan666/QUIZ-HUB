@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <title>Student_Profile | Quiz Zone</title>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #D8D8D8;
+        }
+
+        nav .logo {
+            padding: 30px;
+            font-size: 30px;
+            color: white;
+        }
+
+        nav {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            background-color: #303036;
+            width: 100%;
+            height: 70px;
+            align-items: center;
+            box-shadow: 0 0 15px gray;
+        }
+
+        nav ul {
+            color: white;
+            text-decoration: none;
+            padding-right: 6px;
+            padding-bottom: 40px;
+        }
+
+        nav li:hover {
+            color: cyan;
+        }
+
+        nav ul li {
+            color: white;
+            list-style: none;
+            padding-top: 45px;
+            padding-right: 30px;
+            float: left;
+            position: relative;
+        }
+
+        nav ul li:hover {
+            box-shadow: 0 0.5px cyan;
+        }
+
+        #footer {
+            background: #303036;
+            color: #d3d3d3;
+            height: 400px;
+            width: 100%;
+            position: relative;
+            box-shadow: 0 0 15px gray;
+        }
+
+        #footer-content {
+            height: 350px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: left;
+        }
+
+        #footer-content ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 300;
+            color: #bbbbbb;
+            transition: all 0.3s ease;
+        }
+
+        #footer-content ul li a:hover {
+            padding-left: 15px;
+        }
+
+        #footer-bottom {
+            background: #343A40;
+            color: #686868;
+            height: 40px;
+            width: 100%;
+            text-align: center;
+            position: absolute;
+            bottom: 0px;
+            left: 0px;
+            padding-top: 15px;
+        }
+
+        #footer a,
+        .arrow-btn a {
+            transition: all 0.3s ease;
+            padding: 8px;
+            text-decoration: none;
+        }
+
+        #footer a:hover {
+            color: cyan;
+            padding-left: 15px;
+        }
+
+        #image {
+            top: 140px;
+            left: 70px;
+            position: fixed;
+            text-align: center;
+        }
+
+        #studentprofile-heading,
+        #personaldetails-heading,
+        #academicdetails-heading {
+            align-items: center;
+            background-color: #00A7F4;
+            margin-left: 660px;
+            margin-right: 700px;
+            height: 40px;
+            text-align: center;
+            padding-top: 20px;
+            color: white;
+            width: 220px;
+            text-transform: uppercase;
+            font-weight: 900;
+        }
+
+        #pd,
+        #ad,
+        #sdb {
+            display: none;
+        }
+
+        #sdb,
+        #pdb,
+        #adb {
+            font-size: 17px;
+        }
+
+        #sdb:hover,
+        #pdb:hover,
+        #adb:hover {
+            background-color: cyan;
+        }
+    </style>
+    <link rel="icon" href="https://i.ibb.co/sb8N2bt/Quiz-Zone-Logo-Tile-192.png" type="image/png">
+    <link rel="stylesheet" href="arrbtn.css">
+    <link rel="stylesheet" href="button.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/15f8b2b9b3.js" crossorigin="anonymous"></script>
+    <script>
+        function signout() {
+            var y = confirm('Do You Really Want To SignOut');
+            if (y == true) {
+                window.location.replace("signin.html");
+            } else if (y == false) {
+                return false;
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <nav>
+        <div class="logo"><a href="index.html"><img src="https://i.ibb.co/c81F882/Quiz-Hub-White.png"
+                    alt="Quiz-Zone-logo-white" border="0"></a></div>
+        <ul>
+            <a href="index.html">
+                <li>Home</li>
+            </a>
+            <a onclick="signout()">
+                <li>Sign Out</li>
+            </a>
+            <a href="#">
+                <li>Online Tests</li>
+            </a>
+            <a href="studenttests.html">
+                <li>Test Details</li>
+            </a>
+            <a href="About Us.html" target="_blank">
+                <li>About Us</li>
+            </a>
+            <a href="Contact Us.html" target="_blank">
+                <li>Contact Us</li>
+            </a>
+            <a href="#footer">
+                <li>Help & Support</li>
+            </a>
+        </ul>
+    </nav><br>
+
+    <button id="sdb" style="border: none; color: blue; float: right; padding: 10px;"
+        onclick="showstudentprofile()">View Student Profile</button>
+    <button id="pdb" style="border: none; color: blue; float: right; padding: 10px;"
+        onclick="showpersonaldetails()">View Personal Details</button>
+    <button id="adb" style="border: none; color: blue; float: right; padding: 10px;"
+        onclick="showacademicdetails()">View Academic Details</button>
+
+    <div id="image">
+        <img src="https://s.clipartkey.com/mpngs/s/328-3282962_passport-photo-size-icon.png" id="img1"
+            alt="student's photo" style="float:left" width="160" height="160">
+        <h3> Diya R</h3>
+    </div>
+    <div id="sd">
+        <div id="studentprofile-heading"><big><b> STUDENT PROFILE </b></big></div><br>
+        <table id="table" border="1" cellspacing="5" cellpadding="15" align="center">
+            <colgroup>
+                <col style="width:500px" />
+                <col />
+            </colgroup>
+            <tr>
+                <th>NAME:</th>
+                <td>Diya.R</td>
+            </tr>
+            <tr>
+                <th>ROLL NUMBER:</th>
+                <td>CB.EN.U4CSE20615</td>
+            </tr>
+            <tr>
+                <th>REGISTRATION NUMBER:</th>
+                <td>23620</td>
+            </tr>
+            <tr>
+                <th>DOB:</th>
+                <td>12/12/2002</td>
+            </tr>
+            <tr>
+                <th>GENDER:</th>
+                <td>Female</td>
+            </tr>
+            <tr>
+                <th> UNIVERSITY EMAIL ID:</th>
+                <td>cb.en.u4cse20615@cb.students.amrita.edu</td>
+            </tr>
+            <tr>
+                <th>STUDENT EMAIL ID:</th>
+                <td>diya@gmail.com</td>
+            </tr>
+            <tr>
+                <th>CONTACT NUMBER:</th>
+                <td>9236577123</td>
+            </tr>
+            <tr>
+                <th>ACADEMIC PROGRAM:</th>
+                <td>B.Tech</td>
+            </tr>
+            <tr>
+                <th>BRANCH:</th>
+                <td>CSE</td>
+            </tr>
+            <tr>
+                <th>SECTION:</th>
+                <td>F</td>
+            </tr>
+            <tr>
+                <th>CURRENT SEMESTER:</th>
+                <td>2</td>
+            </tr>
+        </table>
+    </div>
+    <!-- <br /> -->
+    <!-- <hr/> -->
+    <div id="pd">
+        <div id="personaldetails-heading"><big><b> PERSONAL DETAILS </b></big></div><br>
+        <table border="1" cellspacing="5" cellpadding="12" align="center">
+            <colgroup>
+                <col style="width:500px" />
+                <col />
+            </colgroup>
+            <tr>
+                <th>NAME:</th>
+                <td>Diya.R</td>
+            </tr>
+            <tr>
+                <th>DOB:</th>
+                <td>12/12/2002</td>
+            </tr>
+            <tr>
+                <th>FATHER'S NAME:</th>
+                <td>Rahul.B</td>
+            </tr>
+            <tr>
+                <th>OCCUPATION:</th>
+                <td>State Manager</td>
+            </tr>
+            <tr>
+                <th>CONTACT NUMBER:</th>
+                <td>9886623011</td>
+            </tr>
+            <tr>
+                <th>MAIL ID:</th>
+                <td>rahul@gmail.com</td>
+            </tr>
+            <tr>
+                <th>MOTHER'S NAME:</th>
+                <td>Neha.R</td>
+            </tr>
+            <tr>
+                <th>OCCUPATION:</th>
+                <td>Accountant</td>
+            </tr>
+            <tr>
+                <th>CONTACT NUMBER:</th>
+                <td>9775532033</td>
+            </tr>
+            <tr>
+                <th>MAIL ID:</th>
+                <td>neha@gmail.com</td>
+            </tr>
+            <tr>
+                <th>ADDRESS:</th>
+                <td>xyz street thrissur kerala</td>
+            </tr>
+            <tr>
+                <th>RELIGION:</th>
+                <td>Hindu</td>
+            </tr>
+            <tr>
+                <th>QUALIFICATION:</th>
+                <td>10th and 12th passed from cbse</td>
+            </tr>
+        </table>
+    </div>
+    <!-- <br /> -->
+    <!-- <hr/> -->
+    <div id="ad">
+        <div id="academicdetails-heading"><big><b> ACADEMIC DETAILS </b></big></div><br>
+        <h2 align="center" style="margin-left: 30px;"><u>SEMESTER-1</u></h2>
+        <table border="1" cellspacing="5" cellpadding="15" style="margin-left: 480px;" align="center">
+            <colgroup>
+                <col style="width:500px" />
+                <col />
+            </colgroup>
+            <tr>
+                <th>Subject</th>
+                <th>G.P.A</th>
+            </tr>
+            <tr>
+                <td align="center">MATHS:</td>
+                <td align="center">9</td>
+            </tr>
+            <tr>
+                <td align="center">ENGLISH:</td>
+                <td align="center">9</td>
+            </tr>
+            <tr>
+                <td align="center">COMPUTER SYSTEM ESSENTIALS:</td>
+                <td align="center">9</td>
+            </tr>
+            <tr>
+                <td align="center">MECHANICAL ENGINEERING:</td>
+                <td align="center">8.9</td>
+
+            </tr>
+            <tr>
+                <td align="center">PROBLEM SOLVING AND ALGORITHMIC THINKING:</td>
+                <td align="center">9</td>
+            </tr>
+            <tr>
+                <td align="center">CULTURAL EDUCATION:</td>
+                <td align="center">8.9</td>
+            </tr>
+            <tr>
+                <th align="center">TOTAL CGPA:</th>
+                <td align="center">8.9</td>
+            </tr>
+        </table>
+    </div>
+    <script type="text/javascript" src="profile.js"></script>
+    <br />
+    </p>
+    <div id="footer">
+        <div id="footer-content">
+            <div class="footer-section about">
+                <h2 style="padding-inline-start: 100px;">Our Services</h2>
+                <ul
+                    style="list-style-type: disc; list-style-position: inside; padding-inline-start: 100px; line-height: 35px;">
+                    <li><a href="#">Exclusive Test</a></li>
+                    <li><a href="#">Test Categories</a></li>
+                    <li><a href="#">Private Tests</a></li>
+                    <li><a href="#">Group Tests</a></li>
+                    <li><a href="Contact Us.html" target="_blank">Contact Us</a></li>
+                    <li><a href="privacypolicy.html" target="_blank">Terms & Conditions</a></li>
+                    <li><a href="#">Get Verification Mail</a></li>
+                </ul>
+            </div>
+            <div class="footer-section social links">
+                <h2 style="padding-inline-start: 100px;">Keep Connected</h2>
+                <ul
+                    style="list-style-type: disc; list-style-position: inside; padding-inline-start: 100px; line-height: 35px;">
+                    <li><a href="#" class="fa fa-facebook"> Like us on Facebbok</a></li>
+                    <li><a href="#" class="fa fa-twitter"> Follow us on Twitter</a></li>
+                    <li><a href="#" class="fa fa-instagram"> Follow us on Instagram</a></li>
+                    <li><a href="#" class="fa fa-linkedin"> Follow us on Linkedin</a></li>
+                    <li><a href="#" class="fa fa-youtube"> Follow us on YouTube</a></li>
+                </ul>
+            </div>
+            <div class="footer-section support">
+                <h2 style="padding-inline-start: 150px;">Support</h2>
+                <p style="padding-inline-start: 150px; line-height: 35px; color: #bbbbbb;">If you have any questions or
+                    you need our help,</p>
+                <p style="padding-inline-start: 150px; line-height: 0px; color: #bbbbbb;">you can contact us through our
+                </p>
+                <p style="padding-inline-start: 150px; line-height: 40px;"><a href="#"><input type="button"
+                            value="SUPPORT SITE"
+                            style="background-color: #303036; border: 1; border-color: white; color: white; line-height: 25px;"></a>
+                </p>
+            </div>
+            <div class="footer-section quick link">
+                <h2 style="padding-inline-start: 150px;">Quick links</h2>
+                <ul
+                    style="list-style-type: disc; list-style-position: inside; padding-inline-start: 150px; line-height: 35px;">
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="footer-bottom">
+            Copyright © 2021 Quiz Hub All Rights Reserved &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="privacypolicy.html"
+                target="_blank"><input type="button" value="Terms & Privacy"
+                    style="border: 0; color: #686868; background-color: #343A40;"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Powered
+            by HVTech Solutions
+        </div>
+    </div>
+    <div class="arrow-btn">
+        <a href="#" class="fas fa-upload"></a>
+    </div>
+</body>
+
+</html>

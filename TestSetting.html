@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TestCreation | Quiz Zone</title>
+    <link rel="icon" href="https://i.ibb.co/sb8N2bt/Quiz-Zone-Logo-Tile-192.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="button.css">
+    <link rel="stylesheet" href="arrbtn.css">
+    <script src="https://kit.fontawesome.com/15f8b2b9b3.js" crossorigin="anonymous"></script>
+    <style>
+        html{
+            scroll-behavior: smooth;
+        }
+
+        body{
+            margin: 0;
+            padding: 0;
+            background-color: #D8D8D8;
+        }
+
+        nav{
+            height: 80px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            box-shadow: 0 0 15px gray;
+        }
+
+        nav .logo{
+            padding: 20px;
+        }
+
+        .rollno{
+            padding: 30px;
+            font-size: 20px;
+            font-weight: bold;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+
+        .create{
+            margin-left: 380px;
+            background-color: white;
+            width: 750px;
+            height: 530px;
+            padding-left: 20px;
+            padding-top: 2px;
+            border-radius: 20px;
+            
+        }
+
+        .btn2{
+            background-color: white;
+            border: none;
+            color: black;
+            padding: 15px 28px;
+            text-align: center;
+            font-size: 16px;
+            margin-left: 700px;
+            margin-top: 30px;
+            border-radius: 10px;
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        #icon{
+            position: relative;
+            left: 1px;
+            top: 2px;
+            font-size: 20px;
+        }
+
+        .btn2:hover{
+            background-color: cyan;
+        }
+
+        .testnameandclass{
+            padding: 20px;
+            padding-left: 30px;
+        }
+
+        select{
+            width: 150px;
+        }
+
+        .create1{
+            display: flex;
+            flex-direction: row;
+        }
+
+        .content{
+            display: flex;
+        }
+
+        .content1{
+            margin-left: 150px;
+            margin-top: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo"><a href="index.html"><img src="https://i.ibb.co/5cbTc9X/Quiz-Hub-Black.png" alt="Quiz-Zone-logo-black" border="0"></a></div>
+        <div class="rollno">
+            CB.EN.U4CSE20621 <i class="fas fa-user-circle"></i>
+        </div>
+    </nav><br>
+    <div class="create">
+        <div class="content">
+            <div class="testnameandclass">
+                <h2>Test Name</h2>
+                <textarea name="testname" id="" cols="30" rows="1" style="resize: none; border-radius: 10px; outline: none;"></textarea>
+                <h2>Add Class &nbsp;&nbsp;&nbsp;<i class="fas fa-plus" style="font-size: 20px;"></i></h2>
+                    <select name="classes" id="">
+                    <option value="">Select</option>
+                    <option value="Class 1">Class 1</option>
+                    <option value="Class 2">Class 2</option>
+                    <option value="Class 3">Class 3</option>
+                </select>
+            </div>
+            <div class="content1">
+                <h2>Total Questions</h2>
+                <textarea name="totalquestions" id="" cols="30" rows="1" style="resize: none; border-radius: 10px; outline: none;"></textarea>
+                <h2 style="margin-left: 5px;">Negative Marking</h2>
+                <select name="negmark" id="" style="margin-left: 10px;">
+                    <option value="">Select</option>
+                    <option value="-1">-1</option>
+                    <option value="-2">-2</option>
+                </select>
+                <h2 style="margin-top: 60px; margin-left: 8px;">Duration</h2>
+                <textarea name="duration" id="" cols="30" rows="1" style="resize: none; border-radius: 10px; outline: none; margin-left: 5px;" placeholder="Enter Duration In Minutes" required></textarea>
+                <h2 style="margin-left: 8px;">Available</h2>
+                <textarea name="from" id="" cols="30" rows="1" style="resize: none; border-radius: 10px; outline: none; margin-left: 5px;" placeholder="From" required></textarea>
+                <textarea name="to" id="" cols="30" rows="1" style="resize: none; border-radius: 10px; outline: none; margin-left: 5px;" placeholder="To" required></textarea>
+            </div>
+    </div>
+</div>
+<button class="btn2" onclick="createtest()"> Next </button>
+</div>
+<script type="text/javascript">
+function createtest(){
+    window.location.replace("TestCreation-Questions1.html");
+}
+</script>
+    </body>
+</html>

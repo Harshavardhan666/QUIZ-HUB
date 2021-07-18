@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>About Us | Quiz Zone</title>
+    
+    <link rel="icon" href="https://i.ibb.co/sb8N2bt/Quiz-Zone-Logo-Tile-192.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="button.css">
+    <link rel="stylesheet" href="arrbtn.css">
+
+    <script src="https://kit.fontawesome.com/15f8b2b9b3.js" crossorigin="anonymous"></script>
+    
+
+    <style>
+       body{
+           margin: 0;
+           padding: 0;
+           background-color: #D8D8D8;
+       }
+
+       nav .logo{
+            padding: 30px;
+            font-size: 30px;
+            color: white;
+        }
+
+        nav{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            background-color: #303036;
+            width: 100%;
+            height: 70px;
+            align-items: center;
+        }
+
+        nav ul{
+            color: white;
+            text-decoration: none;
+            padding-right: 6px;
+            padding-bottom: 40px;
+        }
+
+        nav li:hover{
+            color: cyan;
+        }
+
+        nav ul li{
+            color: white;
+            list-style: none;
+            padding-top: 45px;
+            padding-right: 30px;
+            float: left;
+            position: relative;
+        }
+
+        nav ul li:hover{
+            box-shadow: 0px 0.5px cyan;      
+        }
+
+        iframe{
+            position: relative;
+            transform: scale(100%, 100%);
+            transition: 0.2s all;
+        }
+
+
+        iframe:hover{
+            transform:scale(102%, 102%);
+            z-index: 0;
+        }
+
+        html{
+            scroll-behavior: smooth;
+        }
+        .aboutus-table{
+            padding: 20px 0px 20px 0px;
+            margin-left: auto;
+            margin-right: auto;
+            border-spacing: 0 10px;
+        }
+
+        .container{
+            display: flex;
+            justify-content: center;
+        }
+
+       .img{
+            margin-top: 0px;
+            margin-left: 10px;
+            width: 650px;
+            height: 500px;
+            border: 0;
+       }
+
+       .text {
+            font-size: 25px;
+            inline-size: 600px;
+            overflow-wrap: break-word;
+            text-align: justify;
+            text-justify: inter-word;
+        }
+
+        .about-team-heading{
+            font-size: 30px;
+            inline-size: 1000px;
+            overflow-wrap: break-word;
+        }
+
+        .aboutus-table{
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .about-team-content-container{
+            width: 200;
+            height: 200;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            position: relative;
+            text-align: left;
+            float: left;
+        }
+
+        .about-team-content-text{
+            text-align: left;
+            position: absolute;
+            left: 10px;
+            top:100px;
+            width: 0%;
+            font-size: 22px;
+            text-decoration: bold;
+            opacity: 0;
+            transition: all 0.2s ease;
+            transform: translateY(150%);
+        }
+
+        .about-team-content-container:hover .about-team-content-text{
+            opacity: 1;
+            width: 100%;
+            transform: translateY(-100%); 
+            font-weight: bold;
+            font-size: 22px;
+        }
+
+        
+        .about-team-content-container img {
+            transition: all 0.2s ease;
+            opacity: 1.0;
+            background-color: #d3d3d3   ;
+        }
+
+        .about-team-content-container:hover img{
+            opacity:0.4;
+            filter:blur(7px);
+            background-color: #ffffff    ; 
+        }
+
+
+
+        .content-right{
+            float: right;
+            text-align: right;
+        }
+
+        .aboutus-heading{
+            align-items: center;
+            background-color: #00A7F4;
+            text-align: center;
+            color: white;
+            width: 300px;
+            font-size: 25px;
+            padding: 10px 10px 10px 10px;
+            margin: 60px 0px 60px 0px;
+            text-decoration: bold;
+            text-transform: uppercase;
+        }
+
+        .mission{
+            background-color: #DBDBDB;
+        }
+
+        /* For drop down website status*/
+            
+    #registered-user-count-content{
+            text-align:center;
+            font-size: 35px;
+            justify-content: center;
+                display:block;
+                background-color:rgb(200, 197, 197);
+                width: 100%;
+                height: 100%;
+                padding: 105px 0px;
+        }
+
+        #dropdown {
+            top: 4px;
+            position: sticky;   
+            display: inline-block;
+            padding-top: 10px;
+            z-index: 10;
+        }
+
+        #drop-down-button {
+            background-color: black;
+            color: white;
+            font-size: 16px;
+            border: none;   
+            padding: 10px 5px;
+        }
+
+        #dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: rgb(26, 25, 25);
+            z-index: 100;
+            width: 300%;
+            height: auto;
+            font-size: 17px;
+            opacity: 90%;    
+        }
+
+
+        #dropdown-content li {
+            color: white;
+            display: block;
+            padding-bottom: 10px;
+        }
+
+       #drop-down-button li:hover {
+        background-color: gainsboro;
+       }
+
+       #footer{
+            background: #303036;
+            color: #d3d3d3;
+            height: 400px;
+            width: 100%;
+            position: relative;
+        }
+
+        #footer-content{
+            height: 350px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: left;
+        }
+
+        #footer-content ul li a{
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 300;
+            color: #bbbbbb;
+            transition: all 0.3s ease;
+        }
+
+        #footer-content ul li a:hover{
+         padding-left: 15px;
+        }
+
+        #footer-bottom{
+            background: #343A40;
+            color: #686868;
+            height: 40px;
+            width: 100%;
+            text-align: center;
+            position:absolute;
+            bottom: 0px;
+            left: 0px;
+            padding-top: 15px;
+        }
+
+        #footer a, .a{
+            transition: all 0.3s ease;
+            padding: 8px; 
+            text-decoration: none;
+        }
+
+        #footer a:hover{
+            color: cyan;
+            padding-left: 15px;
+        }
+
+    </style>
+
+</head>
+<body>
+    <nav>
+        <div class="logo"><a href="index.html"><img src="https://i.ibb.co/c81F882/Quiz-Hub-White.png" alt="Quiz-Zone-logo-white" border="0"></a></div>
+            <ul>
+                <a href="index.html"><li>Home</li></a>
+                <a href="signin.html"><li>Sign In</li></a>
+                <a href="#"><li>Online Tests</li></a>
+                <a href="studenttests.html"><li>Test Details</li></a>
+                <a href="About Us.html" target="_self"><li>About Us</li></a>
+                <a href="Contact Us.html" target="_blank"><li>Contact Us</li></a>
+                <a href="#footer"><li>Help & Support</li></a>
+            </ul>
+    </nav>
+
+        <!-- drop down menu section. -->
+        <div id="dropdown" onmouseover="showWebsiteStatus()" onmouseout="closeWebsiteStatus()">
+            <button id="drop-down-button"> Webserver Status</button>
+    
+            <div id="dropdown-content">
+                <ul>
+                    <li> Connection Strength : <span id="connection-strength"> </span> </li>
+                    <li> Online users : <span id="online-users"> </span> </li>
+                    <li> Total registered users : <span id="registered-users"> </span> </li>
+                    <li> New Questions today : <span id="new-questions"> </span> </li> 
+                    <li> Total Questions : <span id="total-questions"> </span> </li>
+                
+                </ul>
+            </div>
+        </div>
+
+    <div class="container">
+        <div class="aboutus-heading">
+            <big><b> ABOUT US </b></big>
+        </div>
+    </div>
+
+    <table class="container" cellpadding=20px>
+
+        <tr>
+            <td rowspan=2>
+                    <div class="img">
+                        <iframe class="img" src="https://lottiefiles.com/iframe/57527-user-experience" scrolling="no"></iframe>
+                    </div>
+                </div>
+            </td>
+
+            <td>
+                <div class="content-right">
+                    <p class="text"> <b> Quiz Zone.in </b> allows institutions, examiners to create and administer tests in a fast and reliable way. If you're one, this new platform lets you create tests using an interface that is intuitive before anything else, and that is hosted 100% online. You don't have to download or install anything on your own computer to ue this application, and  can take quiz from any device. </p>
+                </div>
+            </td>
+        </tr>
+    </table>
+
+    <br><br><br> <br><br><br>
+
+    <div class="container">
+        <div class="aboutus-heading" style="background-color: #1f87b8;">
+            Our Mission
+        </div>
+    </div>
+
+    <div class="mission">
+    <div class="container">
+        <p class="text" style="padding:  100px 100px 10px 10px; font-size: 25px"> <b> Our Goal </b>: To make the best quiz application possible that aims to help students as much as possible, and also make it fun and interesting for them. We aim to maintain and develop this website frequently by taking in customer feedback to ensure the best experience possible for all. We hope our efforts will help more students strengthen thier knowledge in certain areas.</p>
+        <iframe src="https://lottiefiles.com/iframe/17343-programming" width= 375 height=350 scrolling="no" style="margin-left: 10px; margin-top: 50px"></iframe>
+    </div>
+
+    <br> <br>
+    <div class="container">
+        <iframe src="https://lottiefiles.com/iframe/35184-book-with-bookmark" width= 375 height=350 scrolling="no" style="margin-left: 50px; margin-top: 50px; margin-right: 20px"></iframe>
+        <p class="text" style="padding:  110px 30px 10px 10px; margin-left: 100px; font-size: 25px"> <b> Why do we do this ? </b>: With proper knowledge and education, we can do anything we desire. We try to develop this platform in a way that teachers can asses the students knowledge and students will themself know where they are lacking and where they need to focus more. By doing so, they can expand thier knowledge wich will be very helpful in thier future. </p>
+    </div>
+
+
+    <br> <br> <br> <br>
+    <div class="container">
+        <p class="text" style="padding: 100px 100px 10px 10px; font-size: 25px"> <b> Our promise : </b> We promise to deliver to our customers secure and easy to use applications that aims to help them gain knowledge and perfect thier skills, so that they will have all the skills required to create / work upon thier future and dream products / end goals.</p>
+        <iframe src="https://lottiefiles.com/iframe/3520-light-bulb" width=375 height=350 scrolling="no" style="margin-left: 10px; margin-top: 10px"></iframe>
+    </div>
+    </div>    
+    <br><br><br> <br><br><br>
+
+    <!-- Registeredd User count section-->
+    <div class="container">
+        <div id="registered-user-count-content">
+            Currently helping in the education of over <br/> <br/> 
+            <div id="registered-user-count"></div>   <br/> 
+            Happy Students !! 
+        </div>
+    </div>
+
+    <br><br><br><br><br>
+
+    <div class="container">
+        <div class="aboutus-heading" style="background-color: #317597;">
+            <b style="font-size: 24px;"> Meet the Team </b>
+        </div>
+    </div>
+
+    <div class="container">
+        <p class="text" style="inline-size: 1000px; text-align: center;">
+           <strong>Quiz Zone</strong> is currently being developed by a team of five members. We surround ourself with people who have similar goals and aspirations to improve this website with each passing day. <br><br> <b> Developers </b>:  
+        </p>
+    </div>
+    
+    <table border=0 class="container" cellpadding=10px>
+        <tr>
+            <td class="about-team-content-container">
+                <img src="https://freepikpsd.com/media/2019/11/follower-png-9-Transparent-Images.png" style="width: 200px; height: 200px">
+                <div class="about-team-content-text"> Devaraja</div>
+            </td>
+
+            <td class="about-team-content-container">
+                <img src="https://freepikpsd.com/media/2019/11/follower-png-9-Transparent-Images.png" style="width: 200px; height: 200px;">
+                <div class="about-team-content-text">Dharshita</div>
+            </td>
+
+            <td class="about-team-content-container">
+                <img src="https://freepikpsd.com/media/2019/11/follower-png-9-Transparent-Images.png" style="width: 200px; height: 200px;">
+                <div class="about-team-content-text">Elambarathi</div>
+            </td>
+    </table>
+
+    <br>
+
+    <table border=0 class="container" cellpadding= 10px>
+        <tr style="align-content: center;">
+            <td class="about-team-content-container" >
+                <img src="https://freepikpsd.com/media/2019/11/follower-png-9-Transparent-Images.png" style="width: 200px; height: 200px;">
+                <div class="about-team-content-text">G Harsha Vardhan Tadikonda</div>   
+            </td>
+
+            <td class="about-team-content-container">
+                <img src="https://freepikpsd.com/media/2019/11/follower-png-9-Transparent-Images.png" style="width: 200px; height: 200px;">
+                <div class="about-team-content-text">Tarun</div>
+            </td>
+        </tr>
+    </table>
+
+    <br> <br> <br>
+
+    <div id="footer">
+        <div id="footer-content">
+        <div class="footer-section about"><h2 style="padding-inline-start: 100px;">Our Services</h2>
+            <ul style="list-style-type: disc; list-style-position: inside; padding-inline-start: 100px; line-height: 35px;">
+                <li><a href="#">Exclusive Test</a></li>
+                <li><a href="#">Test Categories</a></li>
+                <li><a href="#">Private Tests</a></li>
+                <li><a href="#">Group Tests</a></li>
+                <li><a href="Contact Us.html" target="_blank">Contact Us</a></li>
+                <li><a href="privacypolicy.html" target="_blank">Terms & Conditions</a></li>
+                <li><a href="signup.html">Login/Create Account</a></li>
+                <li><a href="#">Get Verification Mail</a></li>
+            </ul>
+        </div>
+        <div class="footer-section social links"><h2 style="padding-inline-start: 100px;">Keep Connected</h2>
+            <ul style="list-style-type: disc; list-style-position: inside; padding-inline-start: 100px; line-height: 35px;">
+                <li><a href="#" class="fa fa-facebook"> Like us on Facebbok</a></li>
+                <li><a href="#" class="fa fa-twitter"> Follow us on Twitter</a></li>
+                <li><a href="#" class="fa fa-instagram"> Follow us on Instagram</a></li>
+                <li><a href="#" class="fa fa-linkedin"> Follow us on Linkedin</a></li>
+                <li><a href="#" class="fa fa-youtube"> Follow us on YouTube</a></li>
+                </ul>
+        </div>
+        <div class="footer-section support"><h2 style="padding-inline-start: 150px;">Support</h2>
+        <p style="padding-inline-start: 150px; line-height: 35px; color: #bbbbbb;">If  you have any questions or you need our help,</p><p style="padding-inline-start: 150px; line-height: 0px; color: #bbbbbb;">you can contact us through our</p>
+        <p style="padding-inline-start: 150px; line-height: 40px;"><a href="#"><input type="button" value="SUPPORT SITE" style="background-color: #303036; border: 1; border-color: white; color: white; line-height: 25px;"></a></p>
+        </div>
+        <div class="footer-section quick link"><h2 style="padding-inline-start: 150px;">Quick links</h2>
+        <ul style="list-style-type: disc; list-style-position: inside; padding-inline-start: 150px; line-height: 35px;">
+           <li><a href="#">FAQ</a></li>
+        </ul>
+        </div>
+        </div>
+        <div id="footer-bottom">
+            Copyright © 2021 Quiz Hub All Rights Reserved &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="privacypolicy.html" target="_blank"><input type="button" value="Terms & Privacy" style="border: 0; color: #686868; background-color: #343A40;"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Powered by HVTech Solutions
+        </div>
+        </div>
+        <div class="arrow-btn">
+        <a href="#"><span class="fas fa-upload"></span></a>
+        </div>
+
+        <script>
+    var maxIncrement = 4;
+    var minIncrement = 1;
+    const backgroundColors = ['#82ABC4', '#7195AB', '#638396', '#7195AB', '#82ABC4',  '#8AB6D1'];
+    const textColors = ['#6b7073', '#2c3236', '#1e2124' , '#1e2124', '#525a5e'];
+    var colorIndex = 0;
+
+    function updateRegisteredUserCount() {
+
+        if(window.sessionStorage.getItem("savedRegisteredUserCount") == null) {
+        sessionStorage.setItem("savedRegisteredUserCount", 1287);
+        }
+        if (window.sessionStorage.getItem("savedColorIndex") == null) {
+            sessionStorage.setItem("savedColorIndex", 0);
+        }
+        var registeredUserCount = sessionStorage.getItem("savedRegisteredUserCount");
+
+        document.getElementById('registered-user-count').innerHTML = registeredUserCount.toString() + " + ";
+    
+        registeredUserCount = (parseInt(registeredUserCount) + Math.floor(Math.random() * (maxIncrement - minIncrement))).toString();
+        if (registeredUserCount > 7000) {
+            registeredUserCount = 7000;
+            document.getElementById('registered-user-count') = (registeredUserCount.toString()).concat(" + ");
+        }
+        if (colorIndex > backgroundColors.length) {
+            colorIndex = 0; 
+        }
+
+        if (registeredUserCount % 50 == 0) {
+         document.getElementById('registered-user-count-content').style.backgroundColor = backgroundColors[colorIndex % backgroundColors.length].toString();
+         document.getElementById('registered-user-count').style.color = textColors[colorIndex % textColors.length].toString();
+        colorIndex++;
+        }
+
+
+        sessionStorage.setItem("savedColorIndex", colorIndex);
+        sessionStorage.setItem("savedRegisteredUserCount", registeredUserCount);
+
+    }
+    var numberOfIncrements = 0;
+    //function for current user count
+    function updateOnlineUserCount() { 
+        if (sessionStorage.getItem("savedOnlineUserCount") == null) {
+            sessionStorage.setItem("savedOnlineUserCount", 121);
+        }
+        var onlineUserCount = sessionStorage.getItem("savedOnlineUserCount");
+        onlineUserCount = (parseInt(onlineUserCount) +   Math.floor(Math.random() * (5))).toString();
+        var chanceOfDecrement = Math.floor(Math.random() * 5);
+        if (chanceOfDecrement == 3) {
+            onlineUserCount = (parseInt(onlineUserCount) - 1).toString();
+        }
+        numberOfIncrements++;   
+        if (onlineUserCount < 0) {
+            onlineUserCount = 100;
+        }
+        sessionStorage.setItem("savedOnlineUserCount", onlineUserCount);
+    }
+    function updateWebsiteStatus() {
+        if (sessionStorage.getItem("savedTotalQuestionCount") == null) {
+            sessionStorage.setItem("savedTotalQuestionCount", 5320);
+        }
+        if (sessionStorage.getItem("savedNewQuestionCount") == null) {
+            sessionStorage.setItem("savedNewQuestionCount", 9);
+        }
+
+        var randomNumber = Math.floor(Math.random() * 4);
+
+        var newQuestionsToday = sessionStorage.getItem("savedNewQuestionCount");
+        newQuestionsToday = (parseInt(newQuestionsToday) + randomNumber).toString();
+        var totalQuestions = sessionStorage.getItem("savedTotalQuestionCount");
+
+        var randomIncrease = Math.floor(Math.random() * randomNumber);
+
+        totalQuestions = (parseInt(totalQuestions) + randomIncrease).toString();
+        sessionStorage.setItem("savedTotalQuestionCount", totalQuestions);
+        sessionStorage.setItem("savedNewQuestionCount", newQuestionsToday);
+
+        if (document.getElementById('dropdown-content').style.display == "block") {
+            showWebsiteStatus();
+            // document.getElementById('dropdown-content').style.zIndex = 100;
+        }
+
+    }
+
+    function showWebsiteStatus() {
+
+        document.getElementById('dropdown-content').style.display = "block";
+        var children = document.getElementById('dropdown-content').childNodes;
+        var totalQuestions = sessionStorage.getItem("savedTotalQuestionCount");
+        var newQuestionsToday = sessionStorage.getItem("savedNewQuestionCount");
+        var registeredUserCount = sessionStorage.getItem("savedRegisteredUserCount");
+        var connectionStrength = document.getElementById('connection-strength');
+        var onlineUsers = document.getElementById('online-users');
+        var totalRegisteredUsers =  document.getElementById('registered-users');
+        var newQuestions = document.getElementById('new-questions');
+        var totalQuestion = document.getElementById('total-questions');
+    
+        /* Set values for each of the child elemnents. */
+        connectionStrength.innerHTML = "Moderate";
+        connectionStrength.style.color = "green";
+        if(registeredUserCount % 8 == 0) {
+            connectionStrength.innerHTML = "Weak";
+            connectionStrength.style.color = "orange";
+        }
+        totalRegisteredUsers.innerHTML = registeredUserCount;
+        onlineUsers.innerHTML = sessionStorage.getItem("savedOnlineUserCount");
+        newQuestions.innerHTML = sessionStorage.getItem("savedNewQuestionCount");
+        totalQuestion.innerHTML = sessionStorage.getItem("savedTotalQuestionCount");
+        onlineUsers = sessionStorage.getItem("savedOnlineUserCount");
+
+    }
+
+    function closeWebsiteStatus() {
+        document.getElementById('dropdown-content').style.display = "none";
+    }
+
+    //for moving the website status  div.
+    var websiteStatusElement = document.getElementById('drop-down-button');
+    console.log((websiteStatusElement));
+
+    //Invoke the function every 1 seconds. 
+    setInterval(updateRegisteredUserCount, 1000);
+    setInterval(updateWebsiteStatus, 2000);
+    setInterval(updateOnlineUserCount, 2000);
+
+</script>
+</body>
+</html>

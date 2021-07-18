@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <title>Student_Test | Quiz Zone</title>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #D8D8D8;
+        }
+
+        a {
+            transition: all 0.3s ease;
+        }
+
+        a:hover {
+            padding-left: 5px;
+        }
+
+        nav .logo {
+            padding: 30px;
+            font-size: 30px;
+            color: white;
+        }
+
+        nav {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            background-color: #303036;
+            width: 100%;
+            height: 70px;
+            align-items: center;
+            box-shadow: 0 0 15px gray;
+        }
+
+        nav ul {
+            color: white;
+            text-decoration: none;
+            padding-right: 6px;
+            padding-bottom: 40px;
+        }
+
+        nav li:hover {
+            color: cyan;
+        }
+
+        nav ul li {
+            color: white;
+            list-style: none;
+            padding-top: 45px;
+            padding-right: 30px;
+            float: left;
+            position: relative;
+        }
+
+        nav ul li:hover {
+            box-shadow: 0px 0.5px cyan;
+        }
+
+        #footer a,
+        .arrow-btn a {
+            transition: all 0.3s ease;
+            padding: 8px;
+            text-decoration: none;
+        }
+
+        #footer a:hover {
+            color: cyan;
+            padding-left: 15px;
+        }
+
+        #footer {
+            background: #303036;
+            color: #d3d3d3;
+            height: 400px;
+            width: 100%;
+            position: relative;
+            box-shadow: 0 0 15px gray;
+        }
+
+        #footer-content {
+            height: 350px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: left;
+        }
+
+        #footer-content ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 300;
+            color: #bbbbbb;
+            transition: all 0.3s ease;
+        }
+
+        #footer-content ul li a:hover {
+            padding-left: 15px;
+        }
+
+        #footer-bottom {
+            background: #343A40;
+            color: #686868;
+            height: 40px;
+            width: 100%;
+            text-align: center;
+            position: absolute;
+            bottom: 0px;
+            left: 0px;
+            padding-top: 15px;
+        }
+
+        #announcement-heading {
+            align-items: center;
+            background-color: #00A7F4;
+            margin-left: 660px;
+            margin-right: 700px;
+            height: 40px;
+            text-align: center;
+            padding-top: 20px;
+            color: white;
+            width: 200px;
+            text-transform: uppercase;
+            font-weight: 900;
+        }
+
+        #submittedassessments-heading,
+        #upcomingassessments-heading {
+            align-items: center;
+            background-color: #00A7F4;
+            margin-left: 600px;
+            margin-right: 700px;
+            height: 40px;
+            text-align: center;
+            padding-top: 20px;
+            color: white;
+            width: 300px;
+            text-transform: uppercase;
+            font-weight: 900;
+        }
+
+        #submittedassessments-heading1,
+        #upcomingassessments-heading1 {
+            align-items: center;
+            background-color: #00A7F4;
+            margin-left: 560px;
+            margin-right: 700px;
+            height: 20px;
+            text-align: center;
+            padding-top: 10px;
+            padding-bottom: 50px;
+            font-size: 12px;
+            color: white;
+            width: 400px;
+            text-transform: uppercase;
+
+        }
+
+        #announcement-content {
+            margin-left: 180px;
+            margin-right: 200px;
+        }
+
+        #btn-announcements,
+        #btn-submittedassessments,
+        #btn-backtoassessments {
+            font-size: 17px;
+            margin-top: 20px;
+        }
+
+        #btn-announcements:hover,
+        #btn-submittedassessments:hover,
+        #btn-backtoassessments:hover {
+            background-color: cyan;
+        }
+
+        #assessments,
+        #btn-announcements,
+        #cse102,
+        #cse111,
+        #mat112,
+        #cul111,
+        #btn-backtoassessments,
+        #cse102_up-tests,
+        #cse111_up-tests,
+        #mat112_up-tests,
+        #cul111_up-tests {
+            display: none;
+        }
+    </style>
+    <link rel="icon" href="https://i.ibb.co/sb8N2bt/Quiz-Zone-Logo-Tile-192.png" type="image/png">
+    <link rel="stylesheet" href="arrbtn.css">
+    <link rel="stylesheet" href="button.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/15f8b2b9b3.js" crossorigin="anonymous"></script>
+    <script>
+        function myfunction() {
+            var x = confirm('Press OK To Begin The Test');
+            if (x == false) {
+                return false;
+            } else if (x == true) {
+                window.location.replace("TestPage-Rationale.html");
+            }
+        }
+
+        function myfunction1() {
+            var x = confirm('Press OK To Begin The Test');
+            if (x == false) {
+                return false;
+            } else if (x == true) {
+                window.location.replace("TestPage-Match1.html");
+            }
+        }
+
+        function myfunction2() {
+            var x = confirm('Press OK To Begin The Test');
+            if (x == false) {
+                return false;
+            } else if (x == true) {
+                window.location.replace("TestPage-MCQ1.html");
+            }
+        }
+
+        function myfunction3() {
+            var x = confirm('Press OK To Begin The Test');
+            if (x == false) {
+                return false;
+            } else if (x == true) {
+                window.location.replace("dmtest.html");
+            }
+        }
+
+    </script>
+</head>
+
+<body>
+    <nav>
+        <div class="logo"><a href="index.html"><img src="https://i.ibb.co/c81F882/Quiz-Hub-White.png"
+                    alt="Quiz-Zone-logo-white" border="0"></a></div>
+        <ul>
+            <a href="index.html">
+                <li>Home</li>
+            </a>
+            <a href="signin.html">
+                <li>Sign In</li>
+            </a>
+            <a href="#">
+                <li>Online Tests</li>
+            </a>
+            <a href="studenttests.html">
+                <li>Test Details</li>
+            </a>
+            <a href="About Us.html" target="_blank">
+                <li>About Us</li>
+            </a>
+            <a href="Contact Us.html" target="_blank">
+                <li>Contact Us</li>
+            </a>
+            <a href="#footer">
+                <li>Help & Support</li>
+            </a>
+        </ul>
+    </nav>
+    <button id="btn-announcements" style="border: none; color: blue; float: right; padding: 10px;"
+        onclick="showannouncements()">View Announcements</button>
+    <button id="btn-submittedassessments" style="border: none; color: blue; float: right; padding: 10px;"
+        onclick="showassessments()">View Assessments</button>
+    <button id="btn-backtoassessments" style="border: none; color: blue; float: right; padding: 10px;"
+        onclick="showassessments()">Back To Assessments</button>
+
+    <div id="announcements">
+        <br><br>
+        <div id="announcement-heading"><big><b> Announcements </b></big></div><br><br>
+        <div id="announcement-content">
+            <ul>
+                <font size="4">
+                    <P><U style="color: black;"><B>
+                                <li style="color: black;">PHY TEST
+                            </B></U> : Physics exam on 29th May 2021.The test will be available on the respective site
+                        or in the link <button onclick="myfunction()"
+                            style="color: blue; background-color: #D8D8D8; border: none;">https://www.Physics
+                            test.com</button> at 3:00pm. The exam will end at 4:00pm and the respone will be auto
+                        submitted.</li>
+                    </P><br />
+                    <p><u style="color: black;"><b>
+                                <li style="color: black;">CSE103 TEST
+                            </b></u> : User Interface Design exam on 2nd june 2021. Questions will be available on the
+                        respective site or in the link <button onclick="myfunction1()"
+                            style="color: blue; background-color: #D8D8D8; border: none;">https://www.UID
+                            test.com</button> at 2:00pm. The exam will end at 3:00pm and the response will be auto
+                        submitted.</li>
+                    </p><br />
+                    <p><u style="color: black;"><b>
+                                <li style="color: black;">EEE TEST
+                            </b></u> : EEE exam on 12th june 2021.Questions will be available on the respective site or
+                        in the link <button onclick="myfunction2()"
+                            style="color: blue; background-color: #D8D8D8; border: none;">https://www.EEE
+                            test.com</button> at 10:00am. The exam will end at 11:00am and the response will be auto
+                        submitted.</li>
+                    </p><br />
+                    <p><u style="color: black;"><b>
+                                <li style="color: black;">MAT115 TEST
+                            </b></u> : Discrete Maths exam on 25th june 2021. Questions will be available on the
+                        respective site or in the link <button onclick="myfunction3()"
+                            style="color: blue; background-color: #D8D8D8; border: none;">https://www.DM
+                            test.com</button> at 9:30am. The exam will end at 10:30am and the response will be auto
+                        submitted.</li>
+                    </p><br />
+                </font><br><br><br><br>
+        </div>
+    </div>
+    <br />
+    <div id="assessments">
+        <div id="submittedassessments">
+            <div id="submittedassessments-heading"><big><b> Submitted Assessments </b></big></div><br><br>
+            <div id="submittedassessments-content">
+
+                <table border="0" cellspacing="5" cellpadding="0" align="center">
+                    <colgroup>
+                        <col style="width:400px" />
+                        <col />
+                    </colgroup>
+                    <tr>
+                        <th><a onclick="showCSE102()"><input type="button" id="button"
+                                    value="B.tech..2020.R.CSE.6.19CSE102: P1 - Arrays and Functions"
+                                    style="border:0;background-color:#51c4d3;color:black;width:600px;height:40px;"></a>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th><a onclick="showCSE111()"><input type="button" id="button"
+                                    value="B.tech..2020.R.CSE.6.19CSE111: Data Structures"
+                                    style="border:0;background-color:#51c4d3;color:black;width:600px;height:40px;"></a>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th><a onclick="showMAT112()"><input type="button" id="button"
+                                    value="B.tech..2020.R.CSE.6.19MAT112: Linear Algebra"
+                                    style="border:0;background-color:#51c4d3;color:black;width:600px;height:40px;"></a>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th><a onclick="showCUL111()"><input type="button" id="button"
+                                    value="B.tech..2020.R.CSE.6.19CUL111: Chapter 1,2,3"
+                                    style="border:0;background-color:#51c4d3;color:black;width:600px;height:40px;"></a>
+                        </th>
+                    </tr>
+                </table><br><br>
+            </div>
+        </div>
+
+        <div id="upcomingassessments">
+            <div id="upcomingassessments-heading"><big><b> Upcoming Assessments </b></big></div><br><br>
+            <div id="upcomingassessments-content">
+
+                <table border="0" cellspacing="5" cellpadding="0" align="center">
+                    <colgroup>
+                        <col style="width:400px" />
+                        <col />
+                    </colgroup>
+                    <tr>
+                        <th><a><input onclick="showCSE102_uptests()" type="button" id="button"
+                                    value="B.tech..2020.R.CSE.6.19CSE102: P1 - Arrays and Functions"
+                                    style="border:0;background-color:#51c4d3;color:black;width:600px;height:40px;"></a>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th><a><input onclick="showCSE111_uptests()" type="button" id="button"
+                                    value="B.tech..2020.R.CSE.6.19CSE111: Data Structures"
+                                    style="border:0;background-color:#51c4d3;color:black;width:600px;height:40px;"></a>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th><a><input onclick="showMAT112_uptests()" type="button" id="button"
+                                    value="B.tech..2020.R.CSE.6.19MAT112: Linear Algebra"
+                                    style="border:0;background-color:#51c4d3;color:black;width:600px;height:40px;"></a>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th><a><input onclick="showCUL111_uptests()" type="button" id="button"
+                                    value="B.tech..2020.R.CSE.6.19CUL111: Chapter 1,2,3"
+                                    style="border:0;background-color:#51c4d3;color:black;width:600px;height:40px;"></a>
+                        </th>
+                    </tr>
+                </table><br>
+            </div>
+        </div>
+    </div>
+    <div id="cse102">
+        <div id="submittedassessments-heading1">
+            <h1>Computer Programming</h1>
+        </div>
+        <br />
+        <table id="table" border='1' align="center" cellpadding="15"
+            style="margin-top: 100px; margin-left: 10px; margin-right: 80px;">
+            <tr>
+                <th width="200">Title</th>
+                <th width="150"> Date of Examination</th>
+                <th width="150">Test-Time Duration</th>
+                <th width="150"> Total No. Of Questions</th>
+                <th width="150">Negative Marking</th>
+                <th width="150">Time of Submission</th>
+                <th width="150">Questions Attempted</th>
+                <th width="150">Individual Score</th>
+            </tr>
+        </table><br><br><br><br><br><br><br><br><br><br>
+        <script type="text/javascript">
+            var array = [["Array and Function - P1", "2nd May 2021", "4:00pm-5:00pm", "15", "Nil", "4:59pm", "---", "Not Yet Published"],
+            ["Loop", "2nd April 2021", "3:00pm-4:00pm", "10", "Nil", "4:00pm", "10", "20/20"],
+            ["If-Else", "30th March 2021", "5:00pm-6:00pm", "10", "Nil", "5:50pm", "9", "18/20"]];
+            var table = document.getElementById("table");
+            for (var i = 0; i < array.length; i++) {
+                var newRow = table.insertRow(i + 1);
+                for (var j = 0; j < array[i].length; j++) {
+                    var cell = newRow.insertCell(j);
+                    cell.innerHTML = array[i][j];
+                }
+            }
+        </script>
+    </div>
+
+    <div id="cse111">
+        <div id="submittedassessments-heading1">
+            <h1>Data Structures</h1>
+        </div>
+        <br />
+        <table id="table1" border='1' align="center" cellpadding="15"
+            style="margin-top: 100px; margin-left: 10px; margin-right: 80px;">
+            <tr>
+                <th width="200">Title</th>
+                <th width="150"> Date of Examination</th>
+                <th width="150">Test-Time Duration</th>
+                <th width="150"> Total No. Of Questions</th>
+                <th width="150">Negative Marking</th>
+                <th width="150">Time of Submission</th>
+                <th width="150">Questions Attempted</th>
+                <th width="150">Individual Score</th>
+            </tr>
+        </table><br><br><br><br><br><br><br><br><br><br>
+        <script type="text/javascript">
+            var array = [["Data Structures - P1", "5th May 2021", "3:00pm-4:00pm", "15", "Nil", "3:56pm", "---", "Not Yet Published"],
+            ["Stacks", "5th April 2021", "4:00pm-5:00pm", "10", "Nil", "4:58pm", "10", "20/20"],
+            ["Time Complexity", "28th March 2021", "5:00pm-6:00pm", "20", "Nil", "5:50pm", "18", "36/40"]];
+            var table = document.getElementById("table1");
+            for (var i = 0; i < array.length; i++) {
+                var newRow = table.insertRow(i + 1);
+                for (var j = 0; j < array[i].length; j++) {
+                    var cell = newRow.insertCell(j);
+                    cell.innerHTML = array[i][j];
+                }
+            }
+        </script>
+    </div>
+
+    <div id="mat112">
+        <div id="submittedassessments-heading1">
+            <h1>Linear Algebra</h1>
+        </div>
+        <br />
+        <table id="table2" border='1' align="center" cellpadding="15"
+            style="margin-top: 100px; margin-left: 10px; margin-right: 80px;">
+            <tr>
+                <th width="200">Title</th>
+                <th width="150"> Date of Examination</th>
+                <th width="150">Test-Time Duration</th>
+                <th width="150"> Total No. Of Questions</th>
+                <th width="150">Negative Marking</th>
+                <th width="150">Time of Submission</th>
+                <th width="150">Questions Attempted</th>
+                <th width="150">Individual Score</th>
+            </tr>
+        </table>
+        <br><br><br><br><br><br><br><br><br>
+        <script type="text/javascript">
+            var array = [["Linear Algebra - P1", "11th May 2021", "11:00am-12:00pm", "15", "Nil", "11:53am", "14", "28/30"],
+            ["RowSpace and ColumnSpace", "26th April 2021", "4:00pm-5:00pm", "10", "Nil", "4:58pm", "10", "20/20"],
+            ["Vector Space", "28th March 2021", "5:00pm-6:00pm", "15", "Nil", "5:50pm", "12", "24/30"]];
+            var table = document.getElementById("table2");
+            for (var i = 0; i < array.length; i++) {
+                var newRow = table.insertRow(i + 1);
+                for (var j = 0; j < array[i].length; j++) {
+                    var cell = newRow.insertCell(j);
+                    cell.innerHTML = array[i][j];
+                }
+            }
+        </script>
+    </div>
+
+    <div id="cul111">
+        <div id="submittedassessments-heading1">
+            <h1>Cultural Education</h1>
+        </div>
+        <br />
+        <table id="table3" border='1' align="center" cellpadding="15"
+            style="margin-top: 100px; margin-left: 10px; margin-right: 80px;">
+            <tr>
+                <th width="200">Title</th>
+                <th width="150"> Date of Examination</th>
+                <th width="150">Test-Time Duration</th>
+                <th width="150"> Total No. Of Questions</th>
+                <th width="150">Negative Marking</th>
+                <th width="150">Time of Submission</th>
+                <th width="150">Questions Attempted</th>
+                <th width="150">Individual Score</th>
+            </tr>
+        </table>
+        <br><br><br><br><br><br><br><br><br><br>
+        <script>
+            var array = [["Cultural Exam - P1", "16th May 2021", "5:00pm-6:00pm", "15", "-1", "5:55pm", "14", "27/30"],
+            ["Cultural - Chapter 1,2", "28th April 2021", "12:00pm-12:50pm", "10", "-1", "12:48pm", "10", "20/20"],
+            ["Cultural - Chapter 1", "25th March 2021", "5:00pm-6:00pm", "15", "-1", "5:50pm", "12", "21/30"]];
+            var table = document.getElementById("table3");
+            for (var i = 0; i < array.length; i++) {
+                var newRow = table.insertRow(-1);
+                for (var j = 0; j < array[i].length; j++) {
+                    var cell = newRow.insertCell(j);
+                    cell.innerHTML = array[i][j];
+                }
+            }
+        </script>
+    </div>
+
+    <div id="cse102_up-tests">
+        <div id="upcomingassessments-heading1">
+            <h1>Computer Programming</h1>
+        </div>
+        <br />
+        <table id="table(uptests)" border='1' align="center" cellpadding="15"
+            style="margin-top: 100px; margin-left: 10px; margin-right: 80px;">
+            <tr>
+                <th width="200">Title</th>
+                <th width="150"> Date of Examination</th>
+                <th width="150">Test-Time</th>
+                <th width="150">Duration</th>
+                <th width="150"> Total No. Of Questions</th>
+                <th width="150">Negative Marking</th>
+                <th width="150">Syllabus</th>
+            </tr>
+        </table><br><br><br><br><br><br><br>
+        <script type="text/javascript">
+            var array = [["Array and Function - P1", "2nd May 2021", "4:00pm", "50 Min", "15", "-1", "2D Char Arrays, Functions"],
+            ["Looping And Control Structures", "2nd April 2021", "3:00pm", "15 Min", "10", "Nil", "---"],
+            ["Basics Of Computer Programming", "30th March 2021", "5:00pm", "10 Min", "10", "Nil", "---"]];
+            var table = document.getElementById("table(uptests)");
+            for (var i = 0; i < array.length; i++) {
+                var newRow = table.insertRow(i + 1);
+                for (var j = 0; j < array[i].length; j++) {
+                    var cell = newRow.insertCell(j);
+                    cell.innerHTML = array[i][j];
+                }
+            }
+        </script>
+    </div>
+
+    <div id="cse111_up-tests">
+        <div id="upcomingassessments-heading1">
+            <h1>Data Structures</h1>
+        </div>
+        <br />
+        <table id="table1(uptests)" border='1' align="center" cellpadding="15"
+            style="margin-top: 100px; margin-left: 10px; margin-right: 80px;">
+            <tr>
+                <th width="200">Title</th>
+                <th width="150"> Date of Examination</th>
+                <th width="150">Test-Time</th>
+                <th width="150">Duration</th>
+                <th width="150"> Total No. Of Questions</th>
+                <th width="150">Negative Marking</th>
+                <th width="200">Syllabus</th>
+            </tr>
+        </table><br><br><br><br><br><br>
+        <script type="text/javascript">
+            var array = [["Data Structures - P1", "5th May 2021", "3:00pm", "45 Min", "15", "Nil", "Fundamentals Of Data Structures, Primitive Operations, Time Complexity"],
+            ["Stacks", "5th April 2021", "4:00pm", "30 Min", "10", "Nil", "Types Of Stacks, Applications Of Stacks (Functions, Recursion)"],
+            ["Queues And Vectors", "28th March 2021", "5:00pm", "30 Min", "20", "Nil", "---"]];
+            var table = document.getElementById("table1(uptests)");
+            for (var i = 0; i < array.length; i++) {
+                var newRow = table.insertRow(i + 1);
+                for (var j = 0; j < array[i].length; j++) {
+                    var cell = newRow.insertCell(j);
+                    cell.innerHTML = array[i][j];
+                }
+            }
+        </script>
+    </div>
+
+    <div id="mat112_up-tests">
+        <div id="upcomingassessments-heading1">
+            <h1>Linear Algebra</h1>
+        </div>
+        <br />
+        <table id="table2(uptests)" border='1' align="center" cellpadding="15"
+            style="margin-top: 100px; margin-left: 10px; margin-right: 80px;">
+            <tr>
+                <th width="200">Title</th>
+                <th width="150"> Date of Examination</th>
+                <th width="150">Test-Time</th>
+                <th width="150">Duration</th>
+                <th width="150"> Total No. Of Questions</th>
+                <th width="150">Negative Marking</th>
+                <th width="150">Syllabus</th>
+            </tr>
+        </table>
+        <br><br><br><br><br><br><br><br><br><br>
+        <script type="text/javascript">
+            var array = [["Linear Algebra - P1", "11th May 2021", "11:00am", "60 Min", "15", "Nil", "---"],
+            ["RowSpace and ColumnSpace", "26th April 2021", "4:00pm", "30 Min", "10", "Nil", "---"],
+            ["Vector Space", "28th March 2021", "5:00pm", "20 Min", "15", "Nil", "---"]];
+            var table = document.getElementById("table2(uptests)");
+            for (var i = 0; i < array.length; i++) {
+                var newRow = table.insertRow(i + 1);
+                for (var j = 0; j < array[i].length; j++) {
+                    var cell = newRow.insertCell(j);
+                    cell.innerHTML = array[i][j];
+                }
+            }
+        </script>
+    </div>
+
+    <div id="cul111_up-tests">
+        <div id="upcomingassessments-heading1">
+            <h1>Cultural Education</h1>
+        </div>
+        <br />
+        <table id="table3(uptests)" border='1' align="center" cellpadding="15"
+            style="margin-top: 100px; margin-left: 10px; margin-right: 80px;">
+            <tr>
+                <th width="200">Title</th>
+                <th width="150"> Date of Examination</th>
+                <th width="150">Test-Time</th>
+                <th width="150">Duration</th>
+                <th width="150"> Total No. Of Questions</th>
+                <th width="150">Negative Marking</th>
+                <th width="150">Syllabus</th>
+            </tr>
+        </table>
+        <br><br><br><br><br><br><br><br><br><br>
+        <script>
+            var array = [["Cultural Exam - P1", "16th May 2021", "5:00pm", "60 Min", "50", "-1", "---"],
+            ["Cultural - Chapter 1,2", "28th April 2021", "12:00pm", "45 Min", "30", "Nil", "---"],
+            ["Cultural - Chapter 1", "25th March 2021", "5:00pm", "30 Min", "25", "Nil", "---"]];
+            var table = document.getElementById("table3(uptests)");
+            for (var i = 0; i < array.length; i++) {
+                var newRow = table.insertRow(-1);
+                for (var j = 0; j < array[i].length; j++) {
+                    var cell = newRow.insertCell(j);
+                    cell.innerHTML = array[i][j];
+                }
+            }
+        </script>
+    </div>
+
+    <script type="text/javascript">
+        function showannouncements() {
+            let ele = document.getElementById("announcements");
+            let ele1 = document.getElementById("assessments");
+            let ele2 = document.getElementById("btn-announcements");
+            let ele3 = document.getElementById("btn-submittedassessments");
+            let ele4 = document.getElementById("btn-backtoassessments");
+            let ele5 = document.getElementById("cse102");
+            let ele6 = document.getElementById("cse111");
+            let ele7 = document.getElementById("mat112");
+            let ele8 = document.getElementById("cul111");
+            let ele9 = document.getElementById("cse102_up-tests");
+            let ele10 = document.getElementById("cse111_up-tests");
+            let ele11 = document.getElementById("mat112_up-tests");
+            let ele12 = document.getElementById("cul111_up-tests");
+            ele1.style.display = "none";
+            ele5.style.display = "none";
+            ele2.style.display = "none";
+            ele6.style.display = "none";
+            ele7.style.display = "none";
+            ele8.style.display = "none";
+            ele9.style.display = "none";
+            ele10.style.display = "none";
+            ele11.style.display = "none";
+            ele12.style.display = "none";
+            ele4.style.display = "none";
+            ele.style.display = "block";
+            ele3.style.display = "block";
+        }
+
+        function showassessments() {
+            let ele = document.getElementById("announcements");
+            let ele1 = document.getElementById("assessments");
+            let ele2 = document.getElementById("btn-submittedassessments");
+            let ele3 = document.getElementById("btn-announcements");
+            let ele7 = document.getElementById("btn-backtoassessments");
+            let ele4 = document.getElementById("cse102");
+            let ele5 = document.getElementById("cse111");
+            let ele6 = document.getElementById("mat112");
+            let ele8 = document.getElementById("cul111");
+            let ele9 = document.getElementById("cse102_up-tests");
+            let ele10 = document.getElementById("cse111_up-tests");
+            let ele11 = document.getElementById("mat112_up-tests");
+            let ele12 = document.getElementById("cul111_up-tests");
+            ele.style.display = "none";
+            ele7.style.display = "none";
+            ele8.style.display = "none";
+            ele9.style.display = "none";
+            ele10.style.display = "none";
+            ele11.style.display = "none";
+            ele12.style.display = "none";
+            ele5.style.display = "none";
+            ele6.style.display = "none";
+            ele4.style.display = "none";
+            ele2.style.display = "none";
+            ele1.style.display = "block";
+            ele3.style.display = "block";
+        }
+
+        function showCSE102() {
+            let ele = document.getElementById("cse102");
+            ele.style.display = "block";
+            let ele1 = document.getElementById("assessments");
+            ele1.style.display = "none";
+            let ele2 = document.getElementById("btn-backtoassessments");
+            ele2.style.display = "block";
+        }
+
+        function showCSE111() {
+            let ele = document.getElementById("cse111");
+            ele.style.display = "block";
+            let ele1 = document.getElementById("assessments");
+            ele1.style.display = "none";
+            let ele2 = document.getElementById("btn-backtoassessments");
+            ele2.style.display = "block";
+        }
+
+        function showMAT112() {
+            let ele = document.getElementById("mat112");
+            ele.style.display = "block";
+            let ele1 = document.getElementById("assessments");
+            ele1.style.display = "none";
+            let ele2 = document.getElementById("btn-backtoassessments");
+            ele2.style.display = "block";
+        }
+
+        function showCUL111() {
+            let ele = document.getElementById("cul111");
+            ele.style.display = "block";
+            let ele1 = document.getElementById("assessments");
+            ele1.style.display = "none";
+            let ele2 = document.getElementById("btn-backtoassessments");
+            ele2.style.display = "block";
+        }
+
+        function showCSE102_uptests() {
+            let ele = document.getElementById("cse102_up-tests");
+            ele.style.display = "block";
+            let ele1 = document.getElementById("assessments");
+            ele1.style.display = "none";
+            let ele2 = document.getElementById("btn-backtoassessments");
+            ele2.style.display = "block";
+        }
+
+        function showCSE111_uptests() {
+            let ele = document.getElementById("cse111_up-tests");
+            ele.style.display = "block";
+            let ele1 = document.getElementById("assessments");
+            ele1.style.display = "none";
+            let ele2 = document.getElementById("btn-backtoassessments");
+            ele2.style.display = "block";
+        }
+
+        function showMAT112_uptests() {
+            let ele = document.getElementById("mat112_up-tests");
+            ele.style.display = "block";
+            let ele1 = document.getElementById("assessments");
+            ele1.style.display = "none";
+            let ele2 = document.getElementById("btn-backtoassessments");
+            ele2.style.display = "block";
+        }
+
+        function showCUL111_uptests() {
+            let ele = document.getElementById("cul111_up-tests");
+            ele.style.display = "block";
+            let ele1 = document.getElementById("assessments");
+            ele1.style.display = "none";
+            let ele2 = document.getElementById("btn-backtoassessments");
+            ele2.style.display = "block";
+        }
+    </script>
+
+    <div id="footer">
+        <div id="footer-content">
+            <div class="footer-section about">
+                <h2 style="padding-inline-start: 100px;">Our Services</h2>
+                <ul
+                    style="list-style-type: disc; list-style-position: inside; padding-inline-start: 100px; line-height: 35px;">
+                    <li><a href="#">Exclusive Test</a></li>
+                    <li><a href="#">Test Categories</a></li>
+                    <li><a href="#">Private Tests</a></li>
+                    <li><a href="#">Group Tests</a></li>
+                    <li><a href="Contact Us.html" target="_blank">Contact Us</a></li>
+                    <li><a href="privacypolicy.html" target="_blank">Terms & Conditions</a></li>
+                    <li><a href="signup.html">Login/Create Account</a></li>
+                    <li><a href="#">Get Verification Mail</a></li>
+                </ul>
+            </div>
+            <div class="footer-section social links">
+                <h2 style="padding-inline-start: 100px;">Keep Connected</h2>
+                <ul
+                    style="list-style-type: disc; list-style-position: inside; padding-inline-start: 100px; line-height: 35px;">
+                    <li><a href="#" class="fa fa-facebook"> Like us on Facebbok</a></li>
+                    <li><a href="#" class="fa fa-twitter"> Follow us on Twitter</a></li>
+                    <li><a href="#" class="fa fa-instagram"> Follow us on Instagram</a></li>
+                    <li><a href="#" class="fa fa-linkedin"> Follow us on Linkedin</a></li>
+                    <li><a href="#" class="fa fa-youtube"> Follow us on YouTube</a></li>
+                </ul>
+            </div>
+            <div class="footer-section support">
+                <h2 style="padding-inline-start: 150px;">Support</h2>
+                <p style="padding-inline-start: 150px; line-height: 35px; color: #bbbbbb;">If you have any questions or
+                    you need our help,</p>
+                <p style="padding-inline-start: 150px; line-height: 0px; color: #bbbbbb;">you can contact us through our
+                </p>
+                <p style="padding-inline-start: 150px; line-height: 40px;"><a href="#"><input type="button"
+                            value="SUPPORT SITE"
+                            style="background-color: #303036; border: 1; border-color: white; color: white; line-height: 25px;"></a>
+                </p>
+            </div>
+            <div class="footer-section quick link">
+                <h2 style="padding-inline-start: 150px;">Quick links</h2>
+                <ul
+                    style="list-style-type: disc; list-style-position: inside; padding-inline-start: 150px; line-height: 35px;">
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="footer-bottom">
+            Copyright © 2021 Quiz Hub All Rights Reserved &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="privacypolicy.html"
+                target="_blank"><input type="button" value="Terms & Privacy"
+                    style="border: 0; color: #686868; background-color: #343A40;"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Powered
+            by HVTech Solutions
+        </div>
+    </div>
+    <div class="arrow-btn">
+        <a href="#" class="fas fa-upload"></a>
+    </div>
+</body>
+
+</html>

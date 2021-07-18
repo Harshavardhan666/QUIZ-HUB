@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signin | Quiz Zone</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #D8D8D8;
+        }
+
+        table {
+            color: black;
+            background-color: #d8e3e7;
+            border-radius: 3px;
+        }
+
+        a {
+            transition: all 0.3s ease;
+        }
+
+        a:hover {
+            padding-left: 5px;
+        }
+
+        nav .logo {
+            padding: 30px;
+            font-size: 30px;
+            color: white;
+        }
+
+        nav {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            background-color: #303036;
+            width: 100%;
+            height: 70px;
+            align-items: center;
+            box-shadow: 0 0 15px gray;
+        }
+
+        nav ul {
+            color: white;
+            text-decoration: none;
+            padding-right: 6px;
+            padding-bottom: 40px;
+        }
+
+        nav li:hover {
+            color: cyan;
+        }
+
+        nav ul li {
+            color: white;
+            list-style: none;
+            padding-top: 45px;
+            padding-right: 30px;
+            float: left;
+            position: relative;
+        }
+
+        nav ul li:hover {
+            box-shadow: 0px 0.5px cyan;
+        }
+
+        #footer a,
+        .arrow-btn a {
+            transition: all 0.3s ease;
+            padding: 8px;
+            text-decoration: none;
+        }
+
+        #footer a:hover {
+            color: cyan;
+            padding-left: 15px;
+        }
+
+        #footer {
+            background: #303036;
+            color: #d3d3d3;
+            height: 400px;
+            width: 100%;
+            position: relative;
+            box-shadow: 0 0 15px gray;
+        }
+
+        #footer-content {
+            height: 350px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: left;
+        }
+
+        #footer-content ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 300;
+            color: #bbbbbb;
+            transition: all 0.3s ease;
+        }
+
+        #footer-content ul li a:hover {
+            padding-left: 15px;
+        }
+
+        #footer-bottom {
+            background: #343A40;
+            color: #686868;
+            height: 40px;
+            width: 100%;
+            text-align: center;
+            position: absolute;
+            bottom: 0px;
+            left: 0px;
+            padding-top: 15px;
+        }
+
+        #img {
+            margin-top: 30px;
+            margin-left: 130px;
+            width: 300px;
+            height: 310px;
+            border: 0;
+        }
+
+        #main {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        form {
+            margin-right: 400px;
+            width: 500px;
+        }
+
+        i.fa-envelope {
+            position: absolute;
+            font-size: 20px;
+            margin: 1px 0 0 -25px;
+            color: grey;
+        }
+
+        i.fa-eye,
+        i.fa-eye-slash,
+        span {
+            position: absolute;
+            font-size: 18px;
+            margin-top: 1px;
+            margin-left: -13px;
+            color: grey;
+        }
+
+        i.fa-sign-in-alt {
+            position: absolute;
+            font-size: 18px;
+            margin-top: 8px;
+            margin-left: -35px;
+        }
+
+        i.fa-sign-in-alt:hover {
+            padding-left: 10px;
+        }
+
+        #eye1 {
+            display: none;
+        }
+
+        input:focus {
+            outline: none;
+        }
+
+        #CapsLock-On{
+            display: none;
+        }
+
+        #recovery{
+            display: none;
+        }
+
+        .checkbtn{
+            font-size: 30px;
+            color: white;
+            line-height: 80px;
+            margin-left: 40px;
+            display: none;
+        }
+
+        #check{
+            display: none;
+        }
+
+        @media (max-width: 1000px) {
+            nav ul{
+                display: none;         
+            }
+
+            .checkbtn{
+                display: block;
+            }
+
+        }
+
+        @media (max-width: 1400px) {
+            #img{
+                display: none;         
+            }
+
+            #signinform{
+                margin-left: 400px;
+            }
+
+            
+            #footer{
+                display: none;
+            }
+
+            #footer-bottom{
+                display: block;
+            }
+        }
+
+        @media (max-width: 1000px) {
+            #signinform{
+                margin-left: 300px;
+            }
+        }
+
+        @media (max-width: 800px) {
+            #signinform{
+                margin-left: 200px;
+            }
+        }
+
+        @media (max-width: 700px) {
+            #signinform{
+                margin-left: 30px;
+            }
+        }
+
+    </style>
+    <script>
+        function validateform() {
+            const password = document.login.password.value;
+            // const form=document.getElementById('login');
+            // const email=document.getElementById('email').value; 
+            // const pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+            // if(email.match(pattern)){
+            //     form.classlist.add('valid');
+            //     form.classlist.remove('invalid');
+            //     return true;
+            // }else{
+            //     form.classlist.add('invalid');
+            //     form.classlist.remove('valid');
+            //     alert("Please Enter Valid Email Address.");
+            //     return false;
+            // }if(email == ""){
+            //     form.classlist.remove('valid');
+            //     form.classlist.remove('invalid');
+            //     alert("Null Spaces Are Not Allowed.");
+            //     return false; }
+            if (password.length < 6) {
+                let elem = document.getElementById("password");
+                elem.style.borderColor = "red";
+                elem.style.color = "red";
+                alert("Password Must Be At Least 6 Characters Long.");
+                return false;
+            } else {
+                let elem = document.getElementById("password");
+                elem.style.borderColor = "black";
+                elem.style.color = "black";
+                return true;
+            }
+        }
+        function toggle() {
+            var x = document.getElementById("password");
+            var y = document.getElementById("eye1");
+            var z = document.getElementById("eye2");
+
+            if (x.type === 'password') {
+                x.type = "text";
+                y.style.display = "block";
+                y.style.color = "green";
+                z.style.display = "none";
+            } else {
+                x.type = "password";
+                y.style.display = "none";
+                z.style.display = "block";
+            }
+
+        }
+    </script>
+    <link rel="icon" href="https://i.ibb.co/sb8N2bt/Quiz-Zone-Logo-Tile-192.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/15f8b2b9b3.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="arrbtn.css">
+    <link rel="stylesheet" href="button.css">
+</head>
+
+<body link="blue" vlink="red" alink="green">
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+        </label>
+        <div class="logo"><a href="index.html"><img src="https://i.ibb.co/c81F882/Quiz-Hub-White.png"
+                    alt="Quiz-Zone-logo-white" border="0"></a></div>
+        <ul>
+            <a href="index.html">
+                <li>Home</li>
+            </a>
+            <a href="signin.html">
+                <li>Sign In</li>
+            </a>
+            <a href="#">
+                <li>Online Tests</li>
+            </a>
+            <a href="studenttests.html">
+                <li>Test Details</li>
+            </a>
+            <a href="About Us.html" target="_blank">
+                <li>About Us</li>
+            </a>
+            <a href="Contact Us.html" target="_blank">
+                <li>Contact Us</li>
+            </a>
+            <a href="#footer">
+                <li>Help & Support</li>
+            </a>
+        </ul>
+    </nav><br>
+    <div id="main"><iframe id="img" src="https://lottiefiles.com/iframe/23640-sign-in-or-sign-up-animation"></iframe>
+        <div id="signinform">
+        <form onsubmit="return validateform()" action="studentprofile.html" name="login" id="login" target="_blank"
+            method="POST">
+            <table height="100px" width="85%" cellpadding="30">
+                <tr>
+                    <th bgcolor="skyblue" colspan="2">
+                        <h1><strong>Sign In</b></strong>
+                    </th>
+                </tr>
+                <tr>
+                    <th align="center" colspan="2"><input type="email" name="email" id="email" placeholder="Email"
+                            size="35" autofocus required> <i class="far fa-envelope"></i></th>
+                </tr>
+                <tr>
+                    <th align="center" colspan="2"><input type="password" name="password" id="password"
+                            placeholder="Password" size="35" required onkeydown="capsverify(event)"> <span
+                            onclick="toggle()"><i class="fas fa-eye" id="eye1"></i><i class="fas fa-eye-slash"
+                                id="eye2"></i></span></th>
+                </tr>
+                <tr>
+                    <td align="center" id="CapsLock-On" colspan="1"><span><text id="text"><i
+                                    class="fas fa-exclamation-circle" id="important"></i>&nbsp;CAPSLOCK Key Is Turned
+                                On!</text></span></td>
+                </tr>
+                <tr>
+                    <td align="center" colspan="2">By continuing, you agree to Quiz Hub<a href="privacypolicy.html"
+                            target="_blank"><input type="button" value="Terms of Use"
+                                style="border: 0; color: blue; background-color: #d8e3e7;"></a>and<a
+                            href="privacypolicy.html" target="_blank"><input type="button" value="Privacy Policy."
+                                style="border: 0; color: blue; background-color: #d8e3e7;"></a></td>
+                </tr>
+                <tr>
+                    <th align="left"><a href="Recovery.html"><input type="button" value="Forgot password?"
+                                style="border: 0; color: blue; background-color: #d8e3e7;"></a><br>
+                    <th><input type="submit" id="button" value="Login"><i class="fas fa-sign-in-alt"></i></th>
+                </tr>
+
+            </table>
+            <br>
+            <hr align="right" style="width: 100%;"> <a href="Create Account.html"><input type="button"
+                    value="New to Quiz Zone? Create an account"
+                    style="border: 0; color: blue; background-color: #D8D8D8;"></a>
+            <hr align="left" width="45%">
+        </div>
+    </div>
+
+    
+    <script>
+        function capsverify(event) {
+            var elem1 = event.getModifierState("CapsLock"); // if capslock is on it returns true otherwise false
+            if (elem1 == true) {
+                let val = document.getElementById("CapsLock-On");
+                val.style.display = "block";
+            } else {
+                let val = document.getElementById("CapsLock-On");
+                val.style.display = "none";
+            }
+        }
+
+    </script>
+    <br><br>
+    <div id="footer">
+        <div id="footer-content">
+            <div class="footer-section about">
+                <h2 style="padding-inline-start: 100px;">Our Services</h2>
+                <ul
+                    style="list-style-type: disc; list-style-position: inside; padding-inline-start: 100px; line-height: 35px;">
+                    <li><a href="#">Exclusive Test</a></li>
+                    <li><a href="#">Test Categories</a></li>
+                    <li><a href="#">Private Tests</a></li>
+                    <li><a href="#">Group Tests</a></li>
+                    <li><a href="Contact Us.html" target="_blank">Contact Us</a></li>
+                    <li><a href="privacypolicy.html" target="_blank">Terms & Conditions</a></li>
+                    <li><a href="signup.html">Login/Create Account</a></li>
+                    <li><a href="#">Get Verification Mail</a></li>
+                </ul>
+            </div>
+            <div class="footer-section social links">
+                <h2 style="padding-inline-start: 100px;">Keep Connected</h2>
+                <ul
+                    style="list-style-type: disc; list-style-position: inside; padding-inline-start: 100px; line-height: 35px;">
+                    <li><a href="#" class="fa fa-facebook"> Like us on Facebbok</a></li>
+                    <li><a href="#" class="fa fa-twitter"> Follow us on Twitter</a></li>
+                    <li><a href="#" class="fa fa-instagram"> Follow us on Instagram</a></li>
+                    <li><a href="#" class="fa fa-linkedin"> Follow us on Linkedin</a></li>
+                    <li><a href="#" class="fa fa-youtube"> Follow us on YouTube</a></li>
+                </ul>
+            </div>
+            <div class="footer-section support">
+                <h2 style="padding-inline-start: 150px;">Support</h2>
+                <p style="padding-inline-start: 150px; line-height: 35px; color: #bbbbbb;">If you have any questions or
+                    you need our help,</p>
+                <p style="padding-inline-start: 150px; line-height: 0px; color: #bbbbbb;">you can contact us through our
+                </p>
+                <p style="padding-inline-start: 150px; line-height: 40px;"><a href="#"><input type="button"
+                            value="SUPPORT SITE"
+                            style="background-color: #303036; border: 1; border-color: white; color: white; line-height: 25px;"></a>
+                </p>
+            </div>
+            <div class="footer-section quick link">
+                <h2 style="padding-inline-start: 150px;">Quick links</h2>
+                <ul
+                    style="list-style-type: disc; list-style-position: inside; padding-inline-start: 150px; line-height: 35px;">
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="footer-bottom">
+            Copyright © 2021 Quiz Hub All Rights Reserved &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="privacypolicy.html"
+                target="_blank"><input type="button" value="Terms & Privacy"
+                    style="border: 0; color: #686868; background-color: #343A40;"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Powered
+            by HVTech Solutions
+        </div>
+    </div>
+    <div class="arrow-btn">
+        <a href="#" class="fas fa-upload"></a>
+    </div>
+</body>
+
+</html>
