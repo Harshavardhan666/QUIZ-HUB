@@ -75,6 +75,25 @@
             }
             alert("Thank You For Sending Us Your Queries, We Will Get Back To You Soon");
         }
+
+        function updateFeedback() {
+            var starRatings = document.getElementsByClassName('starRating');
+
+            var starImages = document.getElementsByClassName('starRatingImage');
+
+            for (var i = 0; i < starRatings.length; i++) {
+                if (starRatings[i].checked == true) {
+                    for (var j = 0; j <= i; j++) {
+                        starImages[j].style.filter = "grayscale(0)";
+                    }
+
+
+                    for (var j = i + 1; j < starRatings.length; j++) {
+                        starImages[j].style.filter = "grayscale(100)";
+                    }
+                }
+            }
+        }
     </script>
     <style>
         body {
@@ -228,6 +247,20 @@
             color: #bbbbbb;
         }
 
+        #feedback-form-header {
+            color: #bbbbbb;
+            padding-bottom: 30px;
+        }
+
+        #feedback-form {
+            margin: auto;
+            padding: auto;
+            width: 700px;
+            text-align: center;
+            border: 1px;
+            text-align: center;
+        }
+
         .a1 {
             color: skyblue;
         }
@@ -294,13 +327,14 @@
                                 size="32"></textarea></td>
                     </tr>
                     <tr>
-                        <td><input type="email" placeholder="E-mail *" required size="32"></td>
+                        <td><input type="email" name="email" placeholder="E-mail *" required size="32"></td>
                     </tr>
                     <tr>
                         <td><input type="text" name="City" id="city" placeholder="City" size="32"></td>
                     </tr>
                     <tr>
-                        <td><input type="text" id="number" name="Contact Number" placeholder="Contact Number" size="32"></td>
+                        <td><input type="text" id="number" name="Contact Number" placeholder="Contact Number" size="32">
+                        </td>
                     </tr>
                     <tr>
                         <td><textarea name="Message" cols="30" rows="10" placeholder="Your Message *"
@@ -314,6 +348,71 @@
             </table>
         </div>
     </div><br><br><br><br><br><br>
+
+    <div id="feedback-form">
+        <h2 style="margin: auto" id="feedback-form-header"><big> Share Your Experience </big></h2>
+        <hr style="width: 10">
+        <br>
+        <form name="feedback-form" onclick="updateFeedback()" method="POST" data-netlify=true>
+
+            <div>
+                <label style="text-align: left;"> On a scale of 1 - 5, how would you rate our website ? </label> </br>
+
+                <label>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Gold_Star.svg/240px-Gold_Star.svg.png"
+                        width="30" height="30" class="starRatingImage">
+                    <input type="radio" name="starRating" id="starRating0" class="starRating"
+                        style="visibility: hidden;">
+                </label>
+
+                <label>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Gold_Star.svg/240px-Gold_Star.svg.png"
+                        width="30" height="30" class="starRatingImage">
+                    <input type="radio" name="starRating" id="starRating1" class="starRating"
+                        style="visibility: hidden;">
+                </label>
+
+                <label>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Gold_Star.svg/240px-Gold_Star.svg.png"
+                        width="30" height="30" class="starRatingImage">
+                    <input type="radio" name="starRating" id="starRating2" class="starRating"
+                        style="visibility: hidden;">
+                </label>
+
+                <label>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Gold_Star.svg/240px-Gold_Star.svg.png"
+                        width="30" height="30" class="starRatingImage">
+                    <input type="radio" name="starRating" id="starRating3" class="starRating"
+                        style="visibility: hidden;">
+                </label>
+
+                <label>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Gold_Star.svg/240px-Gold_Star.svg.png"
+                        width="30" height="30" class="starRatingImage">
+                    <input type="radio" name="starRating" id="starRating4" class="starRating"
+                        style="visibility: hidden;">
+                </label>
+            </div>
+
+            <br>
+            <label style="text-align: left;"> Would you recommend our website to your peers? </label> </br>
+            <label><input type="radio" id="recommendTrue" name="Recommend">Yes</label>
+            <label><input type="radio" id="recommendFalse" name="Recommend">No</label> </br> <br>
+            <label style="text-align: left;"> Any Problems or Suggesions ? </label> </br><br>
+            <textarea rows="10" cols="40" style="resize: vertical;">
+                </textarea>
+            <br> <br>
+
+            <input type="submit" id="button" value="Submit" onclick="feedbackSubmit()">&nbsp;&nbsp;&nbsp;
+            <input type="reset" id="reset" value="Clear">
+        </form>
+    </div>
+    <script type="text/javascript">
+        function feedbackSubmit() {
+            window.alert("Thank You For Your Valuable Feedback. We Promise You That We Will Go On Increasing User Experience In Future.");
+        }
+    </script>
+    <br><br><br><br><br><br>
     <div id="footer">
         <div id="footer-content">
             <div class="footer-section about">
