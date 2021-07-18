@@ -321,7 +321,7 @@
         <div id="contactus-form">
             <h2><big>Send us your query</big></h2>
             <table border="0">
-                <form onsubmit="return validation()" data-netlify=true>
+                <form name="validation-form" onsubmit="return validation()">
                     <tr>
                         <td><input type="text" id="name" name="name" required placeholder="Enter Your Name *"
                                 size="32"></textarea></td>
@@ -353,7 +353,7 @@
         <h2 style="margin: auto" id="feedback-form-header"><big> Share Your Experience </big></h2>
         <hr style="width: 10">
         <br>
-        <form name="feedback-form" onclick="updateFeedback()" data-netlify=true>
+        <form name="feedback-form" onclick="updateFeedback()">
 
             <div>
                 <label style="text-align: left;"> On a scale of 1 - 5, how would you rate our website ? </label> </br>
