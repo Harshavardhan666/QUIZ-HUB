@@ -37,6 +37,10 @@
                 ele.style.color = "red";
                 alert("Please Enter Valid E-mail Address.");
                 return false;
+            }else {
+                let ele = document.getElementById("email");
+                ele.style.borderColor = "black";
+                ele.style.color = "black";
             }
 
             let city = document.getElementById("city").value;
@@ -349,7 +353,7 @@
                         </td>
                     </tr>
                     <tr>
-                        <td><textarea name="Message" cols="30" rows="10" placeholder="Your Message *"
+                        <td><textarea name="Message" cols="30" rows="10" required placeholder="Your Message *"
                                 style="resize: vertical;"></textarea></td>
                     </tr>
                     <tr>
