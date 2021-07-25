@@ -37,7 +37,7 @@
                 ele.style.color = "red";
                 alert("Please Enter Valid E-mail Address.");
                 return false;
-            }else {
+            } else {
                 let ele = document.getElementById("email");
                 ele.style.borderColor = "black";
                 ele.style.color = "black";
@@ -76,6 +76,9 @@
                 let numb = document.getElementById("number").value;
                 let char = Math.floor(numb / (10 ** (numb.length - 1)));
                 if ((char == 6) || (char == 7) || (char == 8) || (char == 9)) {
+                    let ele1 = document.getElementById("number");
+                    ele1.style.borderColor = "black";
+                    ele1.style.color = "black";
                 } else {
                     let ele1 = document.getElementById("number");
                     ele1.style.borderColor = "red";

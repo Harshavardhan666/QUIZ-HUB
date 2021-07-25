@@ -169,6 +169,22 @@
                     ele.style.color = "black";
                 }
             }
+
+            let email = document.getElementById("email").value;
+            var atposition = email.indexOf("@");
+            var dotposition = email.lastIndexOf(".");
+            if (atposition < 1 || dotposition < atposition + 2 || dotposition + 2 >= email.length) {
+                let ele = document.getElementById("email");
+                ele.style.borderColor = "red";
+                ele.style.color = "red";
+                alert("Please Enter Valid E-mail Address.");
+                return false;
+            } else {
+                let ele = document.getElementById("email");
+                ele.style.borderColor = "black";
+                ele.style.color = "black";
+            }
+
             var num = document.signup.number.value;
             if (isNaN(num)) {
                 // document.getElementById("number").innerHTML="Enter Numeric Value Only"; 
@@ -185,11 +201,15 @@
                 return false;
             } else if (num > 0) {
                 let numb = document.getElementById("number").value;
-                console.log(numb);
                 let char = Math.floor(numb / (10 ** (numb.length - 1)));
-                console.log(char);
                 if ((char == 6) || (char == 7) || (char == 8) || (char == 9)) {
+                    let ele1 = document.getElementById("number");
+                    ele1.style.borderColor = "black";
+                    ele1.style.color = "black";
                 } else {
+                    let ele1 = document.getElementById("number");
+                    ele1.style.borderColor = "red";
+                    ele1.style.color = "red";
                     alert("Please Enter Valid Mobile Number.");
                     return false;
                 }
@@ -300,7 +320,7 @@
                 </tr>
                 <tr>
                     <th><big>Email:</big></th>
-                    <th><input type="email" placeholder="Email Address" required size="25"></th>
+                    <th><input type="email" name="email" id="email" placeholder="Email Address" required size="25"></th>
                 </tr>
                 <tr>
                     <th><big>Mobile Number:</big></th>
