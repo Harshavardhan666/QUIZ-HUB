@@ -73,6 +73,9 @@
                 let char = Math.floor(numb / (10 ** (numb.length - 1)));
                 if ((char == 6) || (char == 7) || (char == 8) || (char == 9)) {
                 } else {
+                    let ele1 = document.getElementById("number");
+                    ele1.style.borderColor = "red";
+                    ele1.style.color = "red";
                     alert("Please Enter Valid Mobile Number.");
                     return false;
                 }
