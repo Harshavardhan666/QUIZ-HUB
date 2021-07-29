@@ -68,14 +68,14 @@
             }
         }
 
-        function myfunction2() {
-            var z = confirm('Press OK To Submit The Test');
-            if (z == false) {
-                return false;
-            } else if (z == true) {
-                window.location.replace("TestEnd.html")
-            }
-        }
+        // function myfunction2() {
+        //     var z = confirm('Press OK To Submit The Test');
+        //     if (z == false) {
+        //         return false;
+        //     } else if (z == true) {
+        //         window.location.replace("TestEnd.html")
+        //     }
+        // }
     </script>
 </head>
 
@@ -90,6 +90,7 @@
         </center>
     </div>
     <br><br>
+    <form name="quiz">
     <div class="questions">
         <p>
 
@@ -388,7 +389,7 @@
     </div>
 
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <input type="submit" id="button" value="Submit Test" onclick="myfunction2()">
+    <input type="submit" id="button" value="Submit Test" onclick="getScore(this.form);">
     &nbsp;&nbsp;&nbsp;
     <input type="button" id="button" value="End Test" onclick="myfunction1()">
     <p>
@@ -398,7 +399,7 @@
     <div class="arrow-btn">
         <a href="#" class="fas fa-upload"></a>
     </div>
-    <script type="text/javascript">
+    <!-- <script type="text/javascript">
         function generatepoints(){
             let ele = document.getElementsByClassName("points");
             for(var i=0;i<ele.length;i++)
@@ -412,7 +413,64 @@
             }
         }
         generatepoints();
-    </script>
+    </script> -->
+</form>
 </body>
+<script type="text/javascript">
+    var numQues = 10;
+    var numChoi = 4;
+    var answers = new Array(10);
 
+    answers[0] = "Set";
+    answers[1] = "{1, 3, 5, 7, 9}";
+    answers[2] = "One";
+    answers[3] = "{(1, a), (2, a), (1, b), (2, b)}";
+    answers[4] = "5";
+    answers[5] = "Infinite";
+    answers[6] = "8";
+    answers[7] = "One";
+    answers[8] = "{3,8}";
+    answers[9] = "8";
+
+    function getScore(form) {
+
+        var score = 0;
+
+        var currElt;
+
+        var currSelection;
+
+        for (i = 0; i < numQues; i++) {
+
+            currElt = i * numChoi;
+
+            answered = false;
+
+            for (j = 0; j < numChoi; j++) {
+
+                currSelection = form.elements[currElt + j];
+
+                if (currSelection.checked) {
+
+                    answered = true;
+
+                    if (currSelection.value == answers[i]) {
+
+                        score = score + 2;
+
+                        break;
+
+                    }
+
+                }
+
+            }
+
+            if (answered === false) { alert("Do Answer All The Questions, Please"); return false; }
+
+        }
+
+      alert("Your Score Out Of 20 Is: " + score);
+    }
+</script>
 </html>
